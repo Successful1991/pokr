@@ -1,0 +1,115 @@
+extends ../layout/main
+block variable
+block meta
+    title= 'Home'
+    meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="/wp-content/themes/pokrovsky/assets/styles/main.min.css")
+block scripts
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/libs.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/index.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/infrastructure.js')
+    script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCvIwpQlmn08p4nR3bND8v3PBuMrWNMsZM&callback=initMap')
+
+
+block content
+    section.main
+        .infrastructure-first
+            include ./includes/breadcrumb
+            h1.title Інфраструктура
+
+            .infrastructure-first__content
+                ul.infrastructure-first__list
+                    li.infrastructure-first__el
+                        .infrastructure-first__image
+                            image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/1.svg')
+                        .infrastructure-first__text Рішення придбати власну квартиру  - одне з найважливіших у житті! Вибір на користь pokrovsky точно буде правильним. Сучасний та  стильний комплекс будується у класі комфорт+ з урахуванням потреб всіх членів родини.
+
+                    li.infrastructure-first__el
+                        .infrastructure-first__image
+                            image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/2.svg')
+                        .infrastructure-first__text Для малечі різного віку ми побудуємо різноманітні майданчики і спортивні простори, яким, до речі, забудовник приділяє особливу увагу.
+
+                    li.infrastructure-first__el
+                        .infrastructure-first__image
+                            image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/3.svg')
+                        .infrastructure-first__text Мами та тати матимуть фітнес-зали і салони краси.
+
+                    li.infrastructure-first__el
+                        .infrastructure-first__image
+                            image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/4.svg')
+                        .infrastructure-first__text Попіклувались і про автівку. Для неї – власний паркінг. Також облаштуємо стоянку для ваших гостей.
+
+                    li.infrastructure-first__el
+                        .infrastructure-first__image
+                            image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/5.svg')
+                        .infrastructure-first__text Дорослі, не хвилюйтесь про безпеку дітей! Закриті двори охоронятимуться і знаходитимуться під наглядом відеокамер.
+
+                    li.infrastructure-first__el
+                        .infrastructure-first__image
+                            image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/6.svg')
+                        .infrastructure-first__text Родина зможе відпочити у затишних зелених міні-парках з продуманим ландшафтним дизайном. У комплексі зведуть власний дитячий садок.
+        .infrastructure
+            .infrastructure__maps
+                .infrastructure-map(id="map")
+                ul.infrastructure__maps-list
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/sport.svg')
+                        .infrastructure__maps-title Спорт комплекси
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/student.svg')
+                        .infrastructure__maps-title Вищі навчальні заклади
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/child.svg')
+                        .infrastructure__maps-title Дитячі магазини
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/cafe.svg')
+                        .infrastructure__maps-title Кафе, ресторани
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/school.svg')
+                        .infrastructure__maps-title Школи
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/hospital.svg')
+                        .infrastructure__maps-title Аптеки
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/supermarket.svg')
+                        .infrastructure__maps-title Супермаркети
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/trc.svg')
+                        .infrastructure__maps-title Торгові центри
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/bank.svg')
+                        .infrastructure__maps-title Банки
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/park.svg')
+                        .infrastructure__maps-title Парки
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/np.svg')
+                        .infrastructure__maps-title Нова пошта
+                    li.infrastructure__maps-elem
+                        .infrastructure__maps-image
+                            img(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/metro.svg')
+                        .infrastructure__maps-title Метро
+
+
+
+block footer
+    include ../includes/menu
+    footer.footer
+        include ../includes/footer
+    // include ../pages/includes/forms
+block header
+    header.header
+        include ../includes/header.pug

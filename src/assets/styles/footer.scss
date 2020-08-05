@@ -1,0 +1,67 @@
+.footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	padding: 0 50px 50px;
+	margin: auto 0 0 0;
+	z-index: 202;
+	font-size: 0.735vw;
+	background: transparent;
+	pointer-events: none;
+	&__smarto{
+		display: flex;
+		align-items: center;
+		pointer-events: painted;
+		//font-weight: bold;
+		//font-size: 1em;
+		//line-height: 2em;
+		//text-align: right;
+		//letter-spacing: 0.1em;
+		//text-transform: uppercase;
+		//color: $text-dark-3;
+		svg{
+			width: 70px;
+			height: 28px;
+			pointer-events: painted;
+		}
+	}
+	&__small{
+
+	}
+	&__logo{
+		width: 312px;
+		height: 243px;
+		pointer-events: painted;
+		cursor: pointer;
+	}
+	&__developer{
+		width: 273px;
+		height: 60px;
+		margin: 0 50px 0 auto;
+		pointer-events: painted;
+	}
+}
+
+@media screen and (max-width: 1023px){
+	.footer{
+		padding: 0 64px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.footer{
+		padding: 0 40px;
+		&__smarto{
+		  span{
+		    display: none;
+		  }
+			.icon--smarto{
+				height: 28px;
+				width: 70px;
+			}
+		}
+	}
+}

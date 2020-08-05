@@ -1,0 +1,29 @@
+.kvartira{
+  height: 100%;
+  &__render{
+    height: 100%;
+    min-height: 100vh;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: initial;
+      z-index: 2;
+    }
+  }
+}
+
+.render-house{
+  transition: fill 0.4s ease-in ;
+  &:hover{
+    cursor: pointer;
+    fill: rgba(255,255,255,0.3);
+  }
+}

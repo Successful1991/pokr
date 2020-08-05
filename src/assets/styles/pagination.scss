@@ -1,0 +1,59 @@
+.pagination{
+  &__arrow{
+    @include flexCenter();
+    margin: auto 8px;
+    height: auto;
+    cursor: pointer;
+    svg{
+      //fill: $green;
+    }
+    &--right{
+      transform: rotate(180deg);
+    }
+    &.disabled svg{
+      cursor: no-drop;
+      fill: #AEAFAB;
+    }
+  }
+}
+.dots{
+  display: flex;
+  &__element{
+    @include flexCenter();
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: background 0.3s linear;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #7E8888;
+    font-size: 14px;
+    &:hover{
+      color: $mc2;
+    }
+    @include to(480px) {
+      height: 30px;
+      width: 30px;
+    }
+    &.active{
+      background-size: 100%;
+      background: #F9F9F9;
+      //background: url("/wp-content/themes/gatne/assets/images/icon/icon-little.svg") no-repeat center/contain;
+      color: #323131;
+      pointer-events: none;
+    }
+    a{
+      //color: $green;
+      text-decoration: none;
+    }
+  }
+  &__place{
+    @include flexCenter();
+    //color: $green;
+    @include to(480px) {
+      height: 30px;
+      width: 20px;
+    }
+  }
+}
