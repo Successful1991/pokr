@@ -79,15 +79,16 @@
     top: 50%;
     width: 117px;
     height: 91px;
-    transform: translateY(-50%);
     z-index: -1;
     &-right{
       @extend .bg-small;
       right: 0;
+       transform: translate(50%, -50%);
     }
     &-left{
       @extend .bg-small;
       left: 0;
+       transform: translate(-50%, -50%);
     }
     svg{
       fill: transparent;

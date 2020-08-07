@@ -1,0 +1,107 @@
+.floor{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 100%;
+  background: #8890A1;
+  &__param{
+    position: absolute;
+    top: 50%;
+    left: 105px;
+    transform: translate(0, -50%);
+
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1em;
+    color: #EAF1FF;
+    z-index: 50;
+  }
+  &__filter{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 30px;
+    &:nth-last-child(1){
+      margin-bottom: 0;
+    }
+
+    &-wrap{
+      display: flex;
+      flex-direction: column;
+      margin: -40px 70px 0 auto;
+    }
+    &-arrow{
+      position: relative;
+      display: flex;
+      flex: 0 0 8px;
+      height: 4px;
+      width: 8px;
+      margin: 0 5px;
+      cursor: pointer;
+      &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        height: 8px;
+        width: 8px;
+        border-left: 2px solid #EAF1FF;
+        border-bottom: 2px solid #EAF1FF;
+        transform-origin: center ;
+        transition: transform 0.3s ease-in;
+        transform: translateY(-50%)rotate(-45deg);
+      }
+    }
+    &-current{
+      text-align: center;
+      width: 50px;
+      margin: 0 20px;
+      flex-shrink: 0;
+    }
+    &-name{
+      width: 100px;
+      flex-shrink: 0;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    width: initial;
+    clip-path: polygon(calc(100% - 20px) 0,100% 0,100% 100%,calc(100% - 20px) 100%);
+    overflow: hidden;
+    transition: clip-path 0.5s ease-out 0.1s;
+    &:hover{
+      clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+      .floor__filter-arrow:after{
+        transform: translateY(-50%)rotate(45deg);
+      }
+    }
+    &-el{
+      width: 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      &:hover{
+        color: #2F5677;
+      }
+    }
+  }
+  &__render{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    svg{
+      height: 100%;
+      width: initial;
+      max-height: 50vh;
+      max-width: 60vw;
+      margin: 0 auto;
+      z-index: 2;
+    }
+  }
+}

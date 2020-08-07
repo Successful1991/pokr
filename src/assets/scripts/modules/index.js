@@ -3,7 +3,11 @@
 
 function init() {
     // sliders init start
+    $('.js-floor__filter').on('click', '.floor__list-el',function (e) {
+       let section = this.data('section');
+       let floor = this.data('floor');
 
+    });
 
 
     $('.js-call').on('click', e => {
@@ -41,23 +45,23 @@ function init() {
         ajax_form(e,"POST","/wp-admin/admin-ajax.php");
     });
 
-    $('.js-construction').on('click' , '.construction__element', function (e) {
-        let current = this.dataset.num - 1;
-        $.ajax({
-            url:'/wp-admin/admin-ajax.php',
-            method: 'POST',
-            data: {action:'construction',id:$(this).data('id')},
-            success: function (response) {
-                $('.construction__popup').html('').append(response);
-                $('.construction__popup a').magnificPopup({
-                    type: 'image',
-                    gallery:{
-                        enabled:true
-                    },
-                }).magnificPopup('open',current);
-            }
-        })
-    })
+    // $('.js-construction').on('click' , '.construction__element', function (e) {
+    //     let current = this.dataset.num - 1;
+    //     $.ajax({
+    //         url:'/wp-admin/admin-ajax.php',
+    //         method: 'POST',
+    //         data: {action:'construction',id:$(this).data('id')},
+    //         success: function (response) {
+    //             $('.construction__popup').html('').append(response);
+    //             $('.construction__popup a').magnificPopup({
+    //                 type: 'image',
+    //                 gallery:{
+    //                     enabled:true
+    //                 },
+    //             }).magnificPopup('open',current);
+    //         }
+    //     })
+    // })
 }
 
 

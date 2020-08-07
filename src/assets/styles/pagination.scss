@@ -30,7 +30,7 @@
     color: #7E8888;
     font-size: 14px;
     &:hover{
-      color: $mc2;
+      //color: $mc2;
     }
     @include to(480px) {
       height: 30px;

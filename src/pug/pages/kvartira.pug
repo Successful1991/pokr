@@ -14,10 +14,13 @@ block scripts
 
 block content
     section.kvartira
+        include includes/breadcrumb
+        h1.title  Обрати секцію
         .kvartira__render
-            img(src='/wp-content/themes/pokrovsky/assets/images/render.jpg')
+            //img(src='/wp-content/themes/pokrovsky/assets/images/render.jpg')
             //include ../../assets/images/render.svg
-            svg( viewBox="0 0 1920 1080" fill="transparent" xmlns="http://www.w3.org/2000/svg")
+            svg( viewBox="0 0 1920 1080" fill="transparent" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg")
+                image( height='100%' width='100%' x="0" y="0" xlink:href='/wp-content/themes/pokrovsky/assets/images/render.jpg')
                 a( href="#" )
                     path( class="render-house" d="M812.368 737.893H808.868V741.393V876.5H472.153H283.27V712.768V709.823L280.368 709.32L263.019 706.308V564.118V562.236L262.169 561.674L423.306 426.5H467.078L818.994 533.067V535.438L810.302 538.181L807.856 538.953V541.519V549.602L806.843 550.607V552.065V730.345V733.453L809.929 733.821L819.5 734.96V737.893H812.368Z" stroke="#C58A60" stroke-width="7")
                 a( href="#")
@@ -30,6 +33,23 @@ block content
                 path( style="pointer-events:none;" d="M1261.01 529.12V534.44H1257.42V542H1251.6V534.44H1233.06V533.208L1245.78 504.76H1251.94L1241.07 529.12H1251.71L1252.72 518.76H1257.42V529.12H1261.01Z" fill="#EAF1FF")
                 path( style="pointer-events:none;" d="M886.552 697.288H900.44V703H874.96V701.376C880.523 695.291 884.536 690.755 887 687.768C889.501 684.744 891.163 682.448 891.984 680.88C892.805 679.312 893.216 677.763 893.216 676.232C893.216 675.149 892.973 674.197 892.488 673.376C892.04 672.555 891.387 671.92 890.528 671.472C889.707 670.987 888.736 670.744 887.616 670.744C885.861 670.744 884.443 671.267 883.36 672.312C882.315 673.32 881.792 674.645 881.792 676.288V677.128H875.744V676.288C875.744 672.928 876.827 670.221 878.992 668.168C881.157 666.077 884.013 665.032 887.56 665.032C891.032 665.032 893.851 666.077 896.016 668.168C898.219 670.259 899.32 672.947 899.32 676.232C899.32 677.949 899.003 679.611 898.368 681.216C897.771 682.821 896.539 684.893 894.672 687.432C892.843 689.933 890.136 693.219 886.552 697.288Z" fill="#EAF1FF")
                 path( style="pointer-events:none;" d="M1583.62 665.76H1596.17V703H1590.18V671.192H1583.62V665.76Z" fill="#EAF1FF")
+
+
+
+        a.kvartira__param
+            |Обрати за <br>
+            |параметрами
+            .bg-small-left
+                include ../../static/small-house.php
+
+        .compass
+            |пн
+            img(src='/wp-content/themes/pokrovsky/assets/images/icon/compass.svg')
+
+        .list-flat__links
+            a(href='#').list-flat__link 1-Кімнатні
+            a(href='#').list-flat__link 2-Кімнатні
+            a(href='#').list-flat__link 3-Кімнатні
 
 block footer
     footer.footer.footer__small
