@@ -103,7 +103,6 @@ function pagination(page) {
        }
     });
     window.scrollTo(0, 0);
-    ressize();
 }
 
 function checkedPage(pages, conf) {
@@ -172,55 +171,6 @@ function changeDots(page, last) {
         $('.pagination__arrow--right').removeClass('disabled');
     }
     if(last >= 3) {
-    //     console.log('page', page );
-    //     console.log('currentDots', currentDots );
-    //     console.log('last', last );
-
-        // if( page < currentDots.first && page < 2 ){
-        //     currentDots.first = 1;
-        //     $('.dots__element').map( (i,li) => {
-        //         li.dataset.page =  i;
-        //         li.innerHTML =  i;
-        //         currentDots.last = i ;
-        //     })
-        // } else if( page < currentDots.first && page === 2 ){
-        //     currentDots.first = page - 1;
-        //     $('.dots__element').map( (i,li) => {
-        //         li.dataset.page =  page + i - 1;
-        //         li.innerHTML =  page + i - 1;
-        //         currentDots.last = page + i - 1;
-        //     })
-        // } else if(page > currentDots.last && page < last -1) {
-        //     currentDots.first = page;
-        //     $('.dots__element').map( (i,li) => {
-        //         li.dataset.page =  page + i - 2;
-        //         li.innerHTML =  page + i - 2;
-        //         currentDots.last = page + i;
-        //     })
-        // } else if(page > currentDots.last && page < last ) {
-        //     currentDots.first = page - 1;
-        //     $('.dots__element').map( (i,li) => {
-        //         li.dataset.page =  page + i - 1;
-        //         li.innerHTML =  page + i - 1;
-        //         currentDots.last = page + i - 1;
-        //     })
-        // }
-        // if(page === last) {
-        //     currentDots.first = page - 2;
-        //     $('.dots__element').map( (i,li) => {
-        //         li.dataset.page =  page + i - 2;
-        //         li.innerHTML =  page + i - 2;
-        //         currentDots.last = page + i - 2;
-        //     })
-        // } else if( page === 1 ) {
-        //     currentDots.first = 1;
-        //     $('.dots__element').map( (i,li) => {
-        //         li.dataset.page = page + i;
-        //         li.innerHTML =  page + i;
-        //         currentDots.last = page + i;
-        //     })
-        // }
-    // }
 
     let centerAmountMin =  Math.floor(paginationDefaults.dotsAmount/2);
     let centerAmountMax =  Math.ceil(paginationDefaults.dotsAmount/2);

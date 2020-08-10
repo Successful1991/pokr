@@ -33,7 +33,7 @@
 		margin: 0 50px 0 auto;
 		pointer-events: painted;
 	}
-	&__small{
+	&__middle{
 		.footer{
 			&__logo{
 				width: 117px;
@@ -42,6 +42,18 @@
 			&__developer{
 				width: 273px;
 				height: 60px;
+			}
+		}
+	}
+	&__small{
+		.footer{
+			&__logo{
+				width: 117px;
+				height: 91px;
+			}
+			&__developer{
+				width: 129px;
+				height: 28px;
 			}
 		}
 	}

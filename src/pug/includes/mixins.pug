@@ -14,20 +14,6 @@ mixin svg(icon)
 	svg(class="icon--" + icon + ""  role="presentation")&attributes(attributes)
 		use(xlink:href="#icon-" + icon + "")
 
-mixin imgBlock(type, img,num,index,title, text, leaf)
-	div(class='info info-'+ type +' info-index-'+index)
-		.info__img
-			if leaf
-				div(class=leaf+' js-parallax-item' data-speed='1.1')
-			img(src=img alt='foto-1')
-			+iconNum('big', 'green', num)
-		if title
-			if text
-				h4.info__title= title
-			else
-				h4.info__title-green= title
-		if text
-			p.info__text= text
 
 mixin iconNum(types, color, num)
 	div(class='info__icon icon-'+ types +'-wrap')

@@ -1,0 +1,97 @@
+extends ../layout/main
+block variable
+
+block meta
+    title= 'Home'
+    meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="/wp-content/themes/pokrovsky/assets/styles/main.min.css")
+    //link(rel='stylesheet', href="/wp-content/themes/pokrovsky/static/base.css")
+block scripts
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/libs.js')
+    //script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/index.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/news.js')
+
+
+
+block content
+    section.news
+        include includes/breadcrumb
+        h1.title  Новини
+        .news__content
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+            a(href='/single-news/').news__el.js-news__el
+                .news__date
+                    +svg('date').news__date-icon
+                    | 22 Червня 2020
+                .news__name Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.
+                .news__button Дивитися <br > новину
+                    .bg-small-left
+                        include ../../static/small-house.php
+        .pagination.js-pagination
+
+block footer
+    footer.footer.footer__small
+        include ../includes/menu
+        include ../includes/footer
+    // include ../pages/includes/forms
+
+block header
+    header.header
+        include ../includes/header.pug

@@ -1,4 +1,8 @@
 .pagination{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
   &__arrow{
     @include flexCenter();
     margin: auto 8px;
