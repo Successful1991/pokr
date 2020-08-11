@@ -252,10 +252,10 @@
 
 
 @media screen and (max-width: 1023px){
-  .breadcrumb{
-    width: calc(100% - 20px - var(--padding-wrap));
-    margin: var(--padding-wrap) 0 0 calc(20px + var(--padding-wrap));
-  }
+  //.breadcrumb{
+  //  width: calc(100% - 20px - var(--padding-wrap));
+  //  margin: var(--padding-wrap) 0 0 calc(20px + var(--padding-wrap));
+  //}
   .lang,.menu .lang {
     width: 64px;
   }

@@ -83,12 +83,12 @@
     &-right{
       @extend .bg-small;
       right: 0;
-       transform: translate(50%, -50%);
+       transform: translate(50%, -55%);
     }
     &-left{
       @extend .bg-small;
       left: 0;
-       transform: translate(-50%, -50%);
+       transform: translate(-50%, -55%);
     }
     svg{
       fill: transparent;
