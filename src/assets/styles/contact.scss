@@ -1,0 +1,201 @@
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  min-height: 100vh;
+  background: url("../images/menu.jpg")no-repeat center/ cover;
+  &__maps{
+    position: relative;
+  }
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 90%;
+    //min-height: 100vh;
+    //height: calc(100vh - (var(--title-offset) + var(--breadcrumb-offset) + 150px));
+    max-width: 1550px;
+    margin: 0 auto;
+  }
+  &__maps{
+    //height: 100%;
+    //overflow-y: auto;
+    margin-bottom: 30px;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__info{
+    //height: 100%;
+    padding-top: 80px;
+    margin-top: -90px;
+    margin-bottom: 30px;
+    //overflow-y: auto;
+  }
+  &__forms{
+    margin-top: -90px;
+    position: relative;
+    margin-bottom: 30px;
+    //height: 100%;
+    //&:before{
+    //  content: '';
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  width: 100%;
+    //  height: 100px;
+    //  background: linear-gradient(180deg, #8890A1 0%, rgba(136, 144, 161, 0) 70%);
+    //}
+  }
+  .info{
+    &__list{
+      padding: 0 10px 0 50px;
+    }
+    &__el{
+      font-family: "Mont";
+      font-weight: 600;
+      color: #EAF1FF;
+      margin-bottom: 1em;
+    }
+    &__title{
+      font-size: 24px;
+      line-height: 1.6em;
+    }
+    &__text{
+      font-size: 18px;
+      line-height: 1.8em;
+    }
+    &__icon{
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        transform: translate(0, -50%);
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &__locate:before{
+      background: url('../images/contact/locate.svg') no-repeat center /contain;
+    }
+    &__address:before{
+      background: url('../images/contact/address.svg') no-repeat center /contain;
+    }
+    &__time:before{
+      background: url('../images/contact/time.svg') no-repeat center /contain;
+    }
+    &__mail:before{
+      background: url('../images/contact/mail.svg') no-repeat center /contain;
+    }
+    &__phone:before{
+      background: url('../images/contact/phone.svg') no-repeat center /contain;
+    }
+  }
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  padding: 85px 70px 10px;
+  //height: 100%;
+  //overflow-y: auto;
+  border-left: 7px solid #EAF1FF;
+  border-right: 7px solid #EAF1FF;
+  clip-path: polygon(0 70px,100% 0,100% 100%,0 100%, 0 70px);
+  &::-webkit-scrollbar{
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: #D7DDEA;
+    -webkit-box-shadow:none;
+  }
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: #D7DDEA;
+  }
+
+  &::selection {
+    background-color: #D7DDEA;
+    color: #D7DDEA;
+  }
+  &__group{
+    display: flex;
+    flex-direction: column;
+  }
+  &__title{
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: #EAF1FF;
+    margin-bottom: 40px;
+  }
+  &__label{
+    position: relative;
+    //font-family: "Mont";
+    //font-weight: 600;
+    //font-size: 24px;
+    //line-height: 1em;
+    //color: #EAF1FF;
+  }
+  &__input{
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1em;
+    color: #EAF1FF;
+    resize: none;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #61AFAA;
+    padding: 0 0 20px;
+    margin-bottom: 40px;
+    &::-webkit-scrollbar{
+      width: 0px;
+    }
+    &::placeholder{
+      font-family: "Mont";
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1em;
+      color: #EAF1FF;
+    }
+  }
+  &__error{
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    font-family: "Mont";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1em;
+    color: #e46f46;
+  }
+  &__submit{
+    position: relative;
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1em;
+    text-align: center;
+    color: #EAF1FF;
+    background: transparent;
+    border: none;
+    padding: 40px 0;
+    margin: 0 55px 0 auto;
+    z-index: 1;
+  }
+}

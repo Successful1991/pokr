@@ -75,163 +75,194 @@
         <div class="burger__icon"><span></span><span></span><span></span></div>
       </div>
     </header>
-    <section class="main">
-      <div class="infrastructure-first">
-        <!-- breadcrumb start-->
-        <ul class="breadcrumb">
-          <li class="breadcrumb__el"><a href="/">Главная</a></li>
-          <!--li.breadcrumb__el-->
-          <!--    a(href='/news.html') Новости-->
-          <!-- repeat-->
-          <li class="breadcrumb__el"><span>Обрати секцію</span></li>
+    <section class="infrastructure">
+      <!-- breadcrumb start-->
+      <ul class="breadcrumb">
+        <li class="breadcrumb__el"><a href="/">Главная</a></li>
+        <!--li.breadcrumb__el-->
+        <!--    a(href='/news.html') Новости-->
+        <!-- repeat-->
+        <li class="breadcrumb__el"><span>Обрати секцію</span></li>
+      </ul>
+      <!-- breadcrumb end-->
+      <h1 class="title">Розташування</h1>
+      <div class="infrastructure__wrap">
+        <svg id="svg-bg"></svg>
+        <!--svg(id='svg', class='svg' height="750" width="1130")-->
+        <!--    defs-->
+        <!--        filter( id="goo")-->
+        <!--            feGaussianBlur( in="SourceGraphic" stdDeviation="100" result="blur")-->
+        <!--            feColorMatrix( in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 37 -10" result="goo" )-->
+        <!--            feComposite( in="SourceGraphic" in2="goo" operator="atop")-->
+        <!--    defs-->
+        <!--        filter( id="goo2")-->
+        <!--            feGaussianBlur( in="SourceGraphic" stdDeviation="40" result="blur")-->
+        <!--            feColorMatrix( in="blur" mode="matrix" values="1 1 0 0 0  0 1 0 1 0  0 0 1 0 1  0 0 0 12 -4" result="goo2" )-->
+        <!--            feComposite( in="SourceGraphic" in2="goo2" operator="atop" result="light" lighting-color="#aaaaaa")-->
+        <!---->
+        <!--    defs-->
+        <!--        radialGradient( id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%")-->
+        <!--            stop( offset="0%" style="stop-color:#A96349;stop-opacity:1")-->
+        <!--            stop( offset="100%" style="stop-color:#A96349;stop-opacity:0")-->
+        <!--        radialGradient( id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%")-->
+        <!--            stop( offset="0%" style="stop-color:#2F5677;stop-opacity:1")-->
+        <!--            stop( offset="100%" style="stop-color:#2F5677;stop-opacity:0")-->
+        <!--        radialGradient( id="grad3" cx="50%" cy="50%" r="50%" fx="50%" fy="50%")-->
+        <!--            stop( offset="0%" style="stop-color:#24202E;stop-opacity:1")-->
+        <!--            stop( offset="100%" style="stop-color:#24202E;stop-opacity:0")-->
+        <!--        radialGradient( id="grad4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%")-->
+        <!--            stop( offset="0%" style="stop-color:#C48960;stop-opacity:1")-->
+        <!--            stop( offset="100%" style="stop-color:#C48960;stop-opacity:0")-->
+        <!--        radialGradient( id="grad5" cx="50%" cy="50%" r="50%" fx="50%" fy="50%")-->
+        <!--            stop( offset="0%" style="stop-color:#61AEA9;stop-opacity:1")-->
+        <!--            stop( offset="100%" style="stop-color:#61AEA9;stop-opacity:0")-->
+        <!--        radialGradient( id="grad6" cx="50%" cy="50%" r="50%" fx="50%" fy="50%")-->
+        <!--            stop( offset="0%" style="stop-color:#105350;stop-opacity:1")-->
+        <!--            stop( offset="100%" style="stop-color:#105350;stop-opacity:0")-->
+        <!--        radialGradient( id="mouseG" cx="50%" cy="50%" r="40%" fx="50%" fy="50%")-->
+        <!--            stop( offset="0%" style="stop-color:#ffffff;stop-opacity:0.6")-->
+        <!--            stop( offset="100%" style="stop-color:#000000;stop-opacity:0")-->
+        <!--            //stop( offset="10%" style="stop-color:rgb(170,110,85);stop-opacity:0.7")-->
+        <!--            //stop( offset="60%" style="stop-color:rgb(175,135,103);stop-opacity:0.4")-->
+        <!--            //stop( offset="100%" style="stop-color:rgb(185,169,134);stop-opacity:0")-->
+        <!--    g(filter="url(#goo)")-->
+        <!--        circle(cx=255 cy=90 r=570 id='big1' fill="url(#grad1)" )-->
+        <!--        circle(cx=230 cy=450 r=570 id='big2' fill="url(#grad2)")-->
+        <!--        circle(cx=45 cy=650 r=570 id='big3' fill="url(#grad3)" )-->
+        <!--        circle(cx=525 cy=207 r=570 id='big4' fill="url(#grad4)" )-->
+        <!--        circle(cx=845 cy=230 r=570 id='big5' fill="url(#grad5)" )-->
+        <!--        circle(cx=890 cy=480 r=570 id='big6' fill="url(#grad6)" )-->
+        <!--        g(filter="url(#goo2)")-->
+        <!--            circle(cx=200 cy=200 r=200 id='mouse' fill="url(#mouseG)" )-->
+        <!--.infrastructure__content-->
+        <!--ul.infrastructure__list-->
+        <!--    li.infrastructure__el-->
+        <!--        .infrastructure__image-->
+        <!--            image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/1.svg')-->
+        <!--        .infrastructure__text  Розташування комплексу
+        //li.infrastructure-first__el
+        //    .infrastructure-first__image
+        //        image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/2.svg')
+        //    .infrastructure-first__text Для малечі різного віку ми побудуємо різноманітні майданчики і спортивні простори, яким, до речі, забудовник приділяє особливу увагу.
+        //
+        //li.infrastructure-first__el
+        //    .infrastructure-first__image
+        //        image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/3.svg')
+        //    .infrastructure-first__text Мами та тати матимуть фітнес-зали і салони краси.
+        //
+        //li.infrastructure-first__el
+        //    .infrastructure-first__image
+        //        image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/4.svg')
+        //    .infrastructure-first__text Попіклувались і про автівку. Для неї – власний паркінг. Також облаштуємо стоянку для ваших гостей.
+        //
+        //li.infrastructure-first__el
+        //    .infrastructure-first__image
+        //        image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/5.svg')
+        //    .infrastructure-first__text Дорослі, не хвилюйтесь про безпеку дітей! Закриті двори охоронятимуться і знаходитимуться під наглядом відеокамер.
+        //
+        //li.infrastructure-first__el
+        //    .infrastructure-first__image
+        //        image(src='/wp-content/themes/pokrovsky/assets/images/infrastructure/6.svg')
+        //    .infrastructure-first__text Родина зможе відпочити у затишних зелених міні-парках з продуманим ландшафтним дизайном. У комплексі зведуть власний дитячий садок.
+        -->
+        <!--.infrastructure__maps-->
+        <ul class="infrastructure__list">
+          <li class="infrastructure__elem">
+            <div class="infrastructure__image">
+              <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5828 3.78874C14.6967 3.78874 14.8106 3.74545 14.8975 3.65857L16.9109 1.64508C17.0847 1.47161 17.0847 1.1896 16.9109 1.01613C16.7372 0.842361 16.4558 0.842361 16.282 1.01613L14.2685 3.02961C14.0947 3.20309 14.0947 3.48509 14.2685 3.65857C14.3551 3.74545 14.469 3.78874 14.5828 3.78874Z"></path>
+                <path d="M16.5282 5.91817C16.6151 6.00505 16.729 6.04835 16.8429 6.04835C16.9567 6.04835 17.0706 6.00505 17.1575 5.91817L19.429 3.6467C19.6027 3.47323 19.6027 3.19152 19.429 3.01775C19.2552 2.84398 18.9738 2.84398 18.8 3.01775L16.5285 5.28922C16.3545 5.46269 16.3545 5.7444 16.5282 5.91817Z"></path>
+                <path d="M20.2083 2.68267C20.3222 2.68267 20.4361 2.63938 20.523 2.55249L21.5045 1.57096C21.6783 1.39748 21.6783 1.11548 21.5045 0.942004C21.3307 0.768233 21.0493 0.768233 20.8755 0.942004L19.894 1.92354C19.7202 2.09701 19.7202 2.37902 19.894 2.55249C19.9809 2.63908 20.0948 2.68267 20.2083 2.68267Z"></path>
+                <path d="M25.8691 1.09621C25.6954 0.922439 25.414 0.922439 25.2402 1.09621L18.7876 7.54884C18.6138 7.72231 18.6138 8.00432 18.7876 8.17779C18.8744 8.26468 18.9883 8.30797 19.1022 8.30797C19.216 8.30797 19.3299 8.26468 19.4168 8.17779L25.8694 1.72516C26.0429 1.55139 26.0429 1.26968 25.8691 1.09621Z"></path>
+                <path d="M18.5136 13.0656C18.4149 11.9903 18.134 10.9551 17.6789 9.98902C17.6786 9.98842 17.6786 9.98813 17.6783 9.98754C17.2281 9.02676 16.6152 8.15435 15.8584 7.39788C15.7048 7.24072 15.5563 7.10283 15.4151 6.98481C14.9831 6.60168 14.5095 6.25592 14.0069 5.95701C14.0063 5.95672 14.006 5.95642 14.0057 5.95612C13.7219 5.78858 13.4476 5.64476 13.1677 5.51695C12.3549 5.14302 11.4916 4.89126 10.6011 4.7685C10.3965 4.74062 10.1919 4.71898 9.98345 4.70326C9.80968 4.6908 9.62553 4.72906 9.47133 4.72728C8.8836 4.71482 8.29201 4.60718 7.71465 4.90372C7.71317 4.90372 7.71198 4.90372 7.7105 4.90372C6.53622 4.90372 5.42984 5.41554 4.42488 6.0439C3.93915 6.34281 3.47359 6.68293 3.04154 6.97947H3.04124C3.04094 6.97947 3.04065 7.04886 3.04035 7.04916C3.03946 7.05005 3.03828 7.08533 3.03709 7.08652C3.03679 7.08682 3.03679 7.10431 3.0365 7.10431C2.94309 7.18823 2.84997 7.28372 2.76012 7.37386C2.71831 7.41568 2.67413 7.4652 2.63469 7.51324C1.93724 8.23501 1.32311 9.05522 0.901435 9.94572C0.486877 10.8089 0.331789 11.7297 0.0352523 12.678C0.0352523 12.678 0.0352523 12.6783 0.0352523 12.6786C0.0352523 13.199 -0.0148623 13.7349 0.00441256 14.282L0.0456311 14.5981C0.10909 15.52 0.318148 16.4108 0.642855 17.247C0.643152 17.2476 0.648786 17.2482 0.649082 17.2491C0.649675 17.2509 0.65353 17.2527 0.654124 17.2545C0.654717 17.2559 0.656496 17.2577 0.657089 17.2592C0.657385 17.2595 0.658275 17.2601 0.658572 17.2604C0.731816 17.4608 0.819294 17.6669 0.925751 17.8899C1.29435 18.668 1.77058 19.3904 2.35001 20.0478C2.36988 20.0712 2.39005 20.0938 2.41169 20.1154C2.51281 20.2358 2.62609 20.3589 2.74797 20.4808C3.3271 21.0599 3.97978 21.5599 4.6974 21.9718C4.73031 21.9907 4.76323 22.0088 4.79614 22.026C4.79733 22.0266 4.79851 22.0278 4.7997 22.0284C5.95856 22.6763 7.27904 23.0686 8.61553 23.1629C8.83289 23.1795 9.05351 23.1878 9.27443 23.1878C9.38504 23.1878 9.49594 23.1855 9.60626 23.1816C9.60744 23.1816 9.60863 23.1813 9.60981 23.181C10.6444 23.149 11.6547 22.9471 12.6128 22.5802C12.7599 22.5242 12.9064 22.4643 13.0535 22.3991C13.0677 22.3925 13.0817 22.3854 13.095 22.3777C13.9923 21.9774 14.8176 21.4341 15.5482 20.7625C15.5601 20.7527 15.572 20.7408 15.5835 20.7299C15.6648 20.662 15.7451 20.5849 15.8136 20.5134L15.7884 20.4873C16.9334 19.3453 17.8268 17.9234 18.1234 16.3752C18.1234 16.3749 18.1234 16.3749 18.1234 16.3746C18.1234 16.3743 18.1234 16.4683 18.1234 16.4683H18.175H18.2008C18.2868 16.1718 18.3677 15.7905 18.4161 15.4856C18.4169 15.4803 18.4241 15.4515 18.4247 15.4462C18.5424 14.7419 18.5783 14.0038 18.5258 13.2868C18.5231 13.2183 18.5198 13.1347 18.5136 13.0656ZM15.2265 8.02358C15.8566 8.65371 16.3691 9.37282 16.764 10.1566L15.0252 12.9523L12.5541 13.1931L10.2219 10.6835L10.5347 8.45444L13.9704 7.05627C13.9876 7.04945 14.0006 7.037 14.0166 7.0284C14.2992 7.22293 14.575 7.42872 14.8345 7.65884C14.9632 7.76648 15.0904 7.8845 15.2265 8.02358ZM4.63957 17.5163L1.41385 16.7231C1.16565 16.0292 1.00848 15.2967 0.956591 14.5423L0.939095 14.2411C0.925158 13.8392 0.945619 13.4404 0.986541 13.0481L3.91187 11.8566L5.81415 12.767L6.21685 16.1128L4.63957 17.5163ZM4.8937 6.8229C5.7329 6.29833 6.6489 5.93537 7.61828 5.73728L9.67624 8.17333L9.3459 10.5266L6.22041 11.9749L4.303 11.0574L4.04027 7.47765C4.03938 7.46401 4.03315 7.45215 4.03108 7.43881C4.30745 7.21373 4.59539 7.00646 4.8937 6.8229ZM5.44229 21.3612L5.20951 18.2004L6.79064 16.7939L10.1907 17.4656L10.9164 19.372L9.10215 22.2962C8.96129 22.2932 8.82044 22.287 8.68077 22.2763C7.53347 22.195 6.44577 21.8855 5.44229 21.3612ZM15.3131 19.7498L11.6707 18.8543L11.0012 17.0946L12.6861 14.0744L15.1672 13.8327L17.3017 16.3607C16.923 17.6269 16.2407 18.7911 15.3131 19.7498Z"></path>
+              </svg>
+            </div>
+            <div class="infrastructure__title">Спорт комплекси</div>
+          </li>
         </ul>
-        <!-- breadcrumb end-->
-        <h1 class="title">Інфраструктура</h1>
-        <div class="infrastructure-first__content">
-          <ul class="infrastructure-first__list">
-            <li class="infrastructure-first__el">
-              <div class="infrastructure-first__image">
-                <image src="/wp-content/themes/pokrovsky/assets/images/infrastructure/1.svg"></image>
-              </div>
-              <div class="infrastructure-first__text">Рішення придбати власну квартиру  - одне з найважливіших у житті! Вибір на користь pokrovsky точно буде правильним. Сучасний та  стильний комплекс будується у класі комфорт+ з урахуванням потреб всіх членів родини.</div>
-            </li>
-            <li class="infrastructure-first__el">
-              <div class="infrastructure-first__image">
-                <image src="/wp-content/themes/pokrovsky/assets/images/infrastructure/2.svg"></image>
-              </div>
-              <div class="infrastructure-first__text">Для малечі різного віку ми побудуємо різноманітні майданчики і спортивні простори, яким, до речі, забудовник приділяє особливу увагу.</div>
-            </li>
-            <li class="infrastructure-first__el">
-              <div class="infrastructure-first__image">
-                <image src="/wp-content/themes/pokrovsky/assets/images/infrastructure/3.svg"></image>
-              </div>
-              <div class="infrastructure-first__text">Мами та тати матимуть фітнес-зали і салони краси.</div>
-            </li>
-            <li class="infrastructure-first__el">
-              <div class="infrastructure-first__image">
-                <image src="/wp-content/themes/pokrovsky/assets/images/infrastructure/4.svg"></image>
-              </div>
-              <div class="infrastructure-first__text">Попіклувались і про автівку. Для неї – власний паркінг. Також облаштуємо стоянку для ваших гостей.</div>
-            </li>
-            <li class="infrastructure-first__el">
-              <div class="infrastructure-first__image">
-                <image src="/wp-content/themes/pokrovsky/assets/images/infrastructure/5.svg"></image>
-              </div>
-              <div class="infrastructure-first__text">Дорослі, не хвилюйтесь про безпеку дітей! Закриті двори охоронятимуться і знаходитимуться під наглядом відеокамер.</div>
-            </li>
-            <li class="infrastructure-first__el">
-              <div class="infrastructure-first__image">
-                <image src="/wp-content/themes/pokrovsky/assets/images/infrastructure/6.svg"></image>
-              </div>
-              <div class="infrastructure-first__text">Родина зможе відпочити у затишних зелених міні-парках з продуманим ландшафтним дизайном. У комплексі зведуть власний дитячий садок.</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="infrastructure">
-        <div class="infrastructure__maps">
-          <div class="infrastructure-map" id="map"></div>
-          <ul class="infrastructure__maps-list">
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/sport.svg"></div>
-              <div class="infrastructure__maps-title">Спорт комплекси</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/student.svg"></div>
-              <div class="infrastructure__maps-title">Вищі навчальні заклади</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/child.svg"></div>
-              <div class="infrastructure__maps-title">Дитячі магазини</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/cafe.svg"></div>
-              <div class="infrastructure__maps-title">Кафе, ресторани</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/school.svg"></div>
-              <div class="infrastructure__maps-title">Школи</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/hospital.svg"></div>
-              <div class="infrastructure__maps-title">Аптеки</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/supermarket.svg"></div>
-              <div class="infrastructure__maps-title">Супермаркети</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/trc.svg"></div>
-              <div class="infrastructure__maps-title">Торгові центри</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/bank.svg"></div>
-              <div class="infrastructure__maps-title">Банки</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/park.svg"></div>
-              <div class="infrastructure__maps-title">Парки</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/np.svg"></div>
-              <div class="infrastructure__maps-title">Нова пошта</div>
-            </li>
-            <li class="infrastructure__maps-elem">
-              <div class="infrastructure__maps-image"><img src="/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/metro.svg"></div>
-              <div class="infrastructure__maps-title">Метро</div>
-            </li>
-          </ul>
+        <div class="infrastructure__map">
+          <div class="map" id="map"></div>
+          <div class="map__wrap">
+            <svg class="map__bg" width="270" height="210" id="svg-bg" viewBox="0 0 270 210" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.5 206.5L3.5 45.6431L266.5 4.09631V206.5L3.5 206.5Z" fill="#2F5677" fill-opacity="0.95" stroke="#61AFAA" stroke-width="7"></path>
+            </svg>
+            <!--+img('/infrastructure/bg.svg').map__bg--><a class="map__button" href="#">Обрати <br> квартиру
+              <div class="bg-small-right"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
+</svg>
+
+              </div></a>
+          </div>
         </div>
       </div>
     </section>
-    <div class="menu js-menu no-scroll">
-      <!-- левый список (у всех класс .menu__link-title)-->
-      <div class="menu__house"><img src="/wp-content/themes/pokrovsky/assets/images/main/house.svg"></div>
-      <div class="menu__list-wrap">
-        <ul class="menu__list">
-          <li class="menu__elem menu__elem-title"><a class="menu__link" href="#">Головна</a></li>
-          <li class="menu__elem menu__elem-title"><a class="menu__link" href="/about">Про Pokrovsky</a></li>
-          <li class="menu__elem menu__elem-title"><a class="menu__link" href="/builder">Девелопер</a></li>
-          <li class="menu__elem menu__elem-title"><a class="menu__link" href="/news">Головна</a></li>
-          <li class="menu__elem menu__elem-title"><a class="menu__link" href="https://frontvisual.com/web3d/renome/?fbclid=IwAR3nd1g8Au4NCgI10bjTZCgVfd_-GRu1QqPUO1I7Mj0NG1PhTgFhdgbVeWs">Розташування</a></li>
-          <li class="menu__elem menu__elem-title"><a class="menu__link" href="/contacts">Контакти</a></li>
-        </ul>
-        <ul class="menu__list">
-          <li class="menu__title">Про комплекс</li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Філософія проєкту</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Зручності</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Документи</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Вигляд</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Хід будівництва</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Iнфраструктура</a></li>
-        </ul>
-        <ul class="menu__list">
-          <li class="menu__title">Квартири</li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Вибор на планi поверху</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Обрати за параметрами</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">1-Кімнатні</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">2-Кімнатні</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">3-Кімнатні</a></li>
-          <li class="menu__elem"><a class="menu__link" href="/about">Комерційна нерухомість</a></li>
-        </ul>
-      </div>
-    </div>
-    <footer class="footer"><a class="footer__logo" href="#"><img src="/wp-content/themes/pokrovsky/assets/images/icon/logo.svg"></a><a class="footer__developer" href="#"><img src="/wp-content/themes/pokrovsky/assets/images/icon/developer.svg"></a><a class="footer__smarto" href="https://smarto.agency/">
+    <footer class="footer footer__small">
+      <div class="menu js-menu no-scroll">
+        <!-- левый список (у всех класс .menu__link-title)-->
+        <div class="menu__house"><img src="/wp-content/themes/pokrovsky/assets/images/main/house.svg"></div>
+        <div class="menu__list-wrap">
+          <ul class="menu__list">
+            <li class="menu__elem menu__elem-title"><a class="menu__link" href="#">Головна</a></li>
+            <li class="menu__elem menu__elem-title"><a class="menu__link" href="/about">Про Pokrovsky</a></li>
+            <li class="menu__elem menu__elem-title"><a class="menu__link" href="/builder">Девелопер</a></li>
+            <li class="menu__elem menu__elem-title"><a class="menu__link" href="/news">Головна</a></li>
+            <li class="menu__elem menu__elem-title"><a class="menu__link" href="https://frontvisual.com/web3d/renome/?fbclid=IwAR3nd1g8Au4NCgI10bjTZCgVfd_-GRu1QqPUO1I7Mj0NG1PhTgFhdgbVeWs">Розташування</a></li>
+            <li class="menu__elem menu__elem-title"><a class="menu__link" href="/contacts">Контакти</a></li>
+          </ul>
+          <ul class="menu__list">
+            <li class="menu__title">Про комплекс</li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Філософія проєкту</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Зручності</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Документи</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Вигляд</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Хід будівництва</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Iнфраструктура</a></li>
+          </ul>
+          <ul class="menu__list">
+            <li class="menu__title">Квартири</li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Вибор на планi поверху</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Обрати за параметрами</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">1-Кімнатні</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">2-Кімнатні</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">3-Кімнатні</a></li>
+            <li class="menu__elem"><a class="menu__link" href="/about">Комерційна нерухомість</a></li>
+          </ul>
+        </div>
+      </div><a class="footer__logo" href="/"><img src="/wp-content/themes/pokrovsky/assets/images/icon/logo.svg"></a><a class="footer__developer" href="#"><img src="/wp-content/themes/pokrovsky/assets/images/icon/developer.svg"></a><a class="footer__smarto" href="https://smarto.agency/">
         <svg class="icon--smarto" role="presentation">
           <use xlink:href="#icon-smarto"></use>
-        </svg>
+        </svg></a>
+      <div class="form__loader">
+        <div class="lds-spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <!--.footer-bottom__copy-->
         <!--	p © 2008-2019 Все права защищены.-->
         <!--.footer__link--wrap-->
         <!--	span Розработка сайта-->
         <!--	a(href='https://smarto.agency/' rel="nofollow" target="_blank").footer-bottom__link-->
         <!--		+svg('smarto')//img(src='./assets/images/smarto.svg' alt="" title="")
-        --></a></footer>
+        -->
+      </div>
+    </footer>
     <!-- include ../pages/includes/forms-->
     <script src="/wp-content/themes/pokrovsky/assets/scripts/libs.js"></script>
     <script src="/wp-content/themes/pokrovsky/assets/scripts/index.js"></script>
     <script src="/wp-content/themes/pokrovsky/assets/scripts/scroll.js"></script>
     <script src="/wp-content/themes/pokrovsky/assets/scripts/infrastructure.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvIwpQlmn08p4nR3bND8v3PBuMrWNMsZM&amp;callback=initMap"></script>
+    <script src="/wp-content/themes/pokrovsky/assets/scripts/snap.svg.js"></script>
+    <script src="/wp-content/themes/pokrovsky/assets/scripts/canvas.js"></script>
+    <!--script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCvIwpQlmn08p4nR3bND8v3PBuMrWNMsZM&callback=initMap')-->
   </body>
 </html>

@@ -5,15 +5,14 @@ function setMap(data) {
 	var gmarkers1 = [];
 	var markers1 = [];
 
-		// настройка для смены языка проверяет адресную строку и в зависимости от выбраного языка подставляет нужный массив с данными
-		var uri = window.location.href;
-		var searchIndexRu = uri.search('/ru/');
-		var searchIndexEn = uri.search('/en/');
+	// настройка для смены языка проверяет адресную строку и в зависимости от выбраного языка подставляет нужный массив с данными
+	var uri = window.location.href;
+	var searchIndexRu = uri.search('/ru/');
+	var searchIndexEn = uri.search('/en/');
 
 	for (const key in jsonArrData) {
 		if (jsonArrData.hasOwnProperty(key)) {
 			const element = jsonArrData[key];
-
 			markers1.push(addMapMark(element, 0))
 		}
 	}
@@ -23,7 +22,6 @@ function setMap(data) {
 		let pos;
 		let lan;
 		let leg;
-		//console.log(obj.name,obj.cor);
 		if (obj.cor !== undefined) {
 			pos = obj.cor.split(',');
 			lan = pos[0];
@@ -158,7 +156,7 @@ function setMap(data) {
 		})(marker1, content));
 	}
 
-var styleMap = [
+let styleMap = [
     {
         "featureType": "administrative",
         "elementType": "labels.text.fill",

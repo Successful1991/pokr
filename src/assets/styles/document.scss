@@ -1,0 +1,59 @@
+.documents{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  min-height: 100vh;
+  background: #2F5677;
+  padding-bottom: 130px;
+  &__wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 0 5%;
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+  }
+
+}
+.document{
+  position: relative;
+  width: 100%;
+  height: calc(100% - 50px);
+  min-height: 430px;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 90px 40px 40px;
+  margin-bottom: 50px;
+  &__button{
+    position: relative;
+    margin: auto 0 15px 55px;
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1em;
+    color: #EAF1FF;
+    text-decoration: none;
+    z-index: 2;
+  }
+  &__icon{
+    margin: auto 0 0 auto;
+  }
+  &__text{
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    color: #EAF1FF;
+  }
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+}

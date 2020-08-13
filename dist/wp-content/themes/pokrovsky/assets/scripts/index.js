@@ -39,11 +39,11 @@ function init() {
     });
 
      $(".js-form-tel").mask("(999)999-9999");
-
-    $('.js-form__submit').on('click',function(e) {
-        e.preventDefault();
-        ajax_form(e,"POST","/wp-admin/admin-ajax.php");
-    });
+    //
+    // $('.js-form__submit').on('click',function(e) {
+    //     e.preventDefault();
+    //     ajax_form(e,"POST","/wp-admin/admin-ajax.php");
+    // });
 
     // $('.js-construction').on('click' , '.construction__element', function (e) {
     //     let current = this.dataset.num - 1;
@@ -65,87 +65,87 @@ function init() {
 }
 
 
-function ajax_form(e,methods,url) {
-    event.preventDefault();
-    var form = $(e.target).closest("form");
-    var str = form.serialize();
-    str += '&action=app';
-    var errors = false; // по умолчанию ошибок в форме нет
-    $(form).find('.js__form__input ').each(function() {
-        errors = validateForm(this);
-    });
-    $(".js__form__input").on("mouseup",delMessageErrorForm);
-
-    if (!errors) {
-        $.ajax({
-            method: methods,
-            url: url,
-            data: str,
-            beforeSend: function() {
-                $('.form__loader').addClass('active');
-                $(form).find('button > span').text('Отправка...') // замена текста в кнопке при отправке
-            },
-            error: function() {
-                $('.form__loader').removeClass('active');
-                $(form).find('button > span').text('Ошибка отправки!'); // замена текста в кнопке при отправке в случае
-            }
-        })
-            .done(function(data) {
-                var data = JSON.parse(data);
-                console.log(data);
-                // success();
-                successSendMesage();
-                if (data === 'done') {
-                    //$(e).find('.result-text').removeClass('error');
-                    // $(form)[0].reset();
-                    window.location.href = '/message'
-                } else {
-                    //$(e).find('.result-text').addClass('error');
-                }
-                if (data.message) {
-                    $(form).find('.js-result-text').fadeIn();
-                    $(form).find('.js-result-text').html(data.message);
-                    setTimeout(function() {
-
-                        $(e).find('.js-result-text').fadeOut();
-                    },2000)
-                }
-            });
-    } else {
-        $('.form__loader').removeClass('active');
-    }
-}
-
-function validateForm(self) {
-    let elem = $(self);
-    var regular = new RegExp('^[a-zA-Zа-яА-Я\'][a-zA-Zа-яА-Я-\' ]+[a-zA-Zа-яА-Я\']?$');
-    var regularTel = new RegExp(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})?([ .-]?)([0-9]{2})?([ .-]?)([0-9]{2})/);
-
-    if ((elem.attr('type') === 'tel' && (elem.val().length < 6 || !regularTel.test(elem.val()) ) )  ||
-        (elem.attr('type') !== 'tel' && $.trim(elem.val()).length < 2) ||
-        (elem.attr('type') !== 'tel' && !regular.test(elem.val()))) {
-        var errorMessage = $(self).data("errormessage"); // добавляем в input сообщение об ошибке из dataAttr и class
-
-        elem.next().text(errorMessage);
-        elem.addClass('js-no-valid');
-        return true
-    }
-    return false
-}
-
-function delMessageErrorForm() {
-    var defaultMessage = $(this).next().data("defaultmessage"); // при клике на input убираем сообщение и class
-    $(this).next().text('');
-    $(this).removeClass('js-no-valid');
-}
-
-function successSendMesage() {
-    $('.send__success').addClass('.active');
-    setTimeout(function() {
-        $('.popup-wrap').removeClass('active');
-        $('.send__success').removeClass('.active');
-    },2000);
-}
+// function ajax_form(e,methods,url) {
+//     event.preventDefault();
+//     var form = $(e.target).closest("form");
+//     var str = form.serialize();
+//     str += '&action=app';
+//     var errors = false; // по умолчанию ошибок в форме нет
+//     $(form).find('.js__form__input ').each(function() {
+//         errors = validateForm(this);
+//     });
+//     $(".js__form__input").on("mouseup",delMessageErrorForm);
+//
+//     if (!errors) {
+//         $.ajax({
+//             method: methods,
+//             url: url,
+//             data: str,
+//             beforeSend: function() {
+//                 $('.form__loader').addClass('active');
+//                 $(form).find('button > span').text('Отправка...') // замена текста в кнопке при отправке
+//             },
+//             error: function() {
+//                 $('.form__loader').removeClass('active');
+//                 $(form).find('button > span').text('Ошибка отправки!'); // замена текста в кнопке при отправке в случае
+//             }
+//         })
+//             .done(function(data) {
+//                 var data = JSON.parse(data);
+//                 console.log(data);
+//                 // success();
+//                 successSendMesage();
+//                 if (data === 'done') {
+//                     //$(e).find('.result-text').removeClass('error');
+//                     // $(form)[0].reset();
+//                     window.location.href = '/message'
+//                 } else {
+//                     //$(e).find('.result-text').addClass('error');
+//                 }
+//                 if (data.message) {
+//                     $(form).find('.js-result-text').fadeIn();
+//                     $(form).find('.js-result-text').html(data.message);
+//                     setTimeout(function() {
+//
+//                         $(e).find('.js-result-text').fadeOut();
+//                     },2000)
+//                 }
+//             });
+//     } else {
+//         $('.form__loader').removeClass('active');
+//     }
+// }
+//
+// function validateForm(self) {
+//     let elem = $(self);
+//     var regular = new RegExp('^[a-zA-Zа-яА-Я\'][a-zA-Zа-яА-Я-\' ]+[a-zA-Zа-яА-Я\']?$');
+//     var regularTel = new RegExp(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})?([ .-]?)([0-9]{2})?([ .-]?)([0-9]{2})/);
+//
+//     if ((elem.attr('type') === 'tel' && (elem.val().length < 6 || !regularTel.test(elem.val()) ) )  ||
+//         (elem.attr('type') !== 'tel' && $.trim(elem.val()).length < 2) ||
+//         (elem.attr('type') !== 'tel' && !regular.test(elem.val()))) {
+//         var errorMessage = $(self).data("errormessage"); // добавляем в input сообщение об ошибке из dataAttr и class
+//
+//         elem.next().text(errorMessage);
+//         elem.addClass('js-no-valid');
+//         return true
+//     }
+//     return false
+// }
+//
+// function delMessageErrorForm() {
+//     var defaultMessage = $(this).next().data("defaultmessage"); // при клике на input убираем сообщение и class
+//     $(this).next().text('');
+//     $(this).removeClass('js-no-valid');
+// }
+//
+// function successSendMesage() {
+//     $('.send__success').addClass('.active');
+//     setTimeout(function() {
+//         $('.popup-wrap').removeClass('active');
+//         $('.send__success').removeClass('.active');
+//     },2000);
+// }
 
 // function initMap() {
 //   var contentTranslate = [{

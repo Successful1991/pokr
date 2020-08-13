@@ -16,7 +16,6 @@
     <title>Home</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="/wp-content/themes/pokrovsky/assets/styles/main.min.css">
-    <!--link(rel='stylesheet', href="/wp-content/themes/pokrovsky/static/base.css")-->
   </head>
   <body>
     <div class="preloader js-preloader">
@@ -76,7 +75,7 @@
         <div class="burger__icon"><span></span><span></span><span></span></div>
       </div>
     </header>
-    <section class="news">
+    <section class="contact">
       <!-- breadcrumb start-->
       <ul class="breadcrumb">
         <li class="breadcrumb__el"><a href="/">Главная</a></li>
@@ -86,113 +85,73 @@
         <li class="breadcrumb__el"><span>Обрати секцію</span></li>
       </ul>
       <!-- breadcrumb end-->
-      <h1 class="title"> Новини</h1>
-      <div class="news__content"><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
-          </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <h1 class="title">Контакти</h1>
+      <div class="contact__wrap">
+        <div class="contact__maps"><img src="/wp-content/themes/pokrovsky/assets/images/contact/map.png" title="foto" alt="foto"/>
+          <div class="map__wrap">
+            <svg class="map__bg" width="270" height="210" id="svg-bg" viewBox="0 0 270 210" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.5 206.5L3.5 45.6431L266.5 4.09631V206.5L3.5 206.5Z" fill="#2F5677" fill-opacity="0.95" stroke="#61AFAA" stroke-width="7"></path>
+            </svg><a class="map__button" href="#">Відкрити <br> на карті
+              <div class="bg-small-right"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
 </svg>
 
-            </div>
-          </div></a><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
+              </div></a>
           </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </div>
+        <div class="contact__info">
+          <ul class="info__list">
+            <li class="info__el">
+              <div class="info__title info__icon info__locate">Адреса:</div>
+              <p class="info__text">м. Рівне, вул. Орлова, 2</p>
+            </li>
+            <li class="info__el">
+              <div class="info__title info__icon info__address">Адреса відділу продажу:</div>
+              <p class="info__text">м. Рівне, вул.Костромська, 73</p>
+            </li>
+            <li class="info__el">
+              <div class="info__title info__icon info__time">Час роботи відділу продажу:</div>
+              <p class="info__text">пн-вт:	09:00–18:00</p>
+              <p class="info__text">сб: 10.00-16.00</p>
+              <p class="info__text">вс: вихідний</p>
+            </li>
+            <li class="info__el">
+              <div class="info__title info__icon info__mail">Наш e-mail:</div>
+              <p class="info__text">pokrovsky@renome.ua</p>
+            </li>
+            <li class="info__el">
+              <div class="info__title info__icon info__phone">Телефон:</div>
+              <p class="info__text">067 360 28 26</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contact__forms">
+          <form class="form" name="contact">
+            <fieldset class="form__group">
+              <legend class="form__title">Надіслати <br> повідомлення</legend>
+              <label class="form__label">
+                <input class="form__input js-form__input" name="name" type="text" placeholder="Ім’я:" data-errormessage="Имя не введено"><span class="js-result-text form__error"></span>
+              </label>
+              <label class="form__label">
+                <input class="form__input js-form__input js-tel-mask" id="js-tel-mask" name="tel" type="text" placeholder="+3 8 (0_ _)   _ _   _ _   _ _ _" data-errormessage="введите номер"><span class="js-result-text form__error"></span>
+              </label>
+              <label class="form__label">
+                <textarea class="form__input js-form__input" name="message" placeholder="Повідомлення"></textarea><span class="js-result-text form__error"></span>
+              </label>
+              <label class="form__label">
+                <input class="form__input js-form__input" name="time" type="text" placeholder="Вкажіть зручний час:"><span class="js-result-text form__error"></span>
+              </label>
+            </fieldset>
+            <button class="form__submit js-form__submit" type="button">Надіслати
+              <div class="bg-small-right"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
 </svg>
 
-            </div>
-          </div></a><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
-          </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
-</svg>
-
-            </div>
-          </div></a><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
-          </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
-</svg>
-
-            </div>
-          </div></a><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
-          </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
-</svg>
-
-            </div>
-          </div></a><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
-          </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
-</svg>
-
-            </div>
-          </div></a><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
-          </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
-</svg>
-
-            </div>
-          </div></a><a class="news__el js-news__el" href="/single-news/">
-          <div class="news__date">
-            <svg class="icon--date news__date-icon" role="presentation">
-              <use xlink:href="#icon-date"></use>
-            </svg>22 Червня 2020
-          </div>
-          <div class="news__name">Філософія команди РЕНОМЕ об'єднує передові технології та багаторічний досвід заради ефективного та якісного результату.</div>
-          <div class="news__button">Дивитися <br > новину
-            <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
-</svg>
-
-            </div>
-          </div></a></div>
-      <div class="pagination js-pagination"></div>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
     <footer class="footer footer__small">
       <div class="menu js-menu no-scroll">
@@ -256,8 +215,9 @@
     </footer>
     <!-- include ../pages/includes/forms-->
     <script src="/wp-content/themes/pokrovsky/assets/scripts/libs.js"></script>
-    <!--script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')-->
     <script src="/wp-content/themes/pokrovsky/assets/scripts/index.js"></script>
-    <script src="/wp-content/themes/pokrovsky/assets/scripts/news.js"></script>
+    <!--script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')-->
+    <script src="/wp-content/themes/pokrovsky/assets/scripts/contact.js"></script>
+    <!--script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCvIwpQlmn08p4nR3bND8v3PBuMrWNMsZM&callback=initMap')-->
   </body>
 </html>
