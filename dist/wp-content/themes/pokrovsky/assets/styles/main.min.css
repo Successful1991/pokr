@@ -2644,6 +2644,11 @@ body {
   height: 50px;
 }
 
+.header.header-transparent .burger .bg-small svg, .header.header-transparent .burger .bg-small-right svg, .header.header-transparent .burger .bg-small-left svg, .header.header-transparent .burger .bg-small-right svg, .header.header-transparent .burger .bg-small-left svg {
+  fill: transparent;
+  stroke: transparent;
+}
+
 .logo img {
   height: 35px;
 }
@@ -5880,6 +5885,11 @@ input:checked + .u-filter__checkbox__label svg {
   z-index: 3;
 }
 
+#svg-bg {
+  width: 300px;
+  height: 200px;
+}
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6216,4 +6226,550 @@ input:checked + .u-filter__checkbox__label svg {
   display: inline-block;
   height: 100%;
   width: 100%;
+}
+
+.construction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  background: #2F5677;
+}
+
+.construction .title {
+  height: inherit;
+  margin-bottom: 30px;
+}
+
+.construction__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.construction__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 500px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.construction__title {
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.6em;
+  color: #61AFAA;
+  margin-bottom: 32px;
+}
+
+.construction__text {
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #EAF1FF;
+}
+
+.construction__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  height: inherit;
+  width: 100%;
+  padding: 50px 0 0;
+  overflow-y: auto;
+}
+
+.construction__content-wrap {
+  position: relative;
+  height: 100%;
+  width: 70%;
+  margin: 0 5% 0 0;
+  padding: 50px 0 0;
+}
+
+.construction__content-wrap:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: 85px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2F5677), to(rgba(47, 86, 119, 0)));
+  background: -o-linear-gradient(top, #2F5677 0%, rgba(47, 86, 119, 0) 100%);
+  background: linear-gradient(180deg, #2F5677 0%, rgba(47, 86, 119, 0) 100%);
+}
+
+.construction__content-wrap:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 85px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2F5677), to(rgba(47, 86, 119, 0)));
+  background: -o-linear-gradient(bottom, #2F5677 0%, rgba(47, 86, 119, 0) 100%);
+  background: linear-gradient(0deg, #2F5677 0%, rgba(47, 86, 119, 0) 100%);
+}
+
+.construction__content::-webkit-scrollbar {
+  width: 0;
+}
+
+.construction__filter {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 48px 33px 32px;
+  margin-bottom: 30px;
+  z-index: 55555;
+}
+
+.construction__filter-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.construction__filter-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 20px 0 50px;
+}
+
+.construction__filter-name {
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #EAF1FF;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.construction__filter-list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 160px;
+  height: 44px;
+  margin: auto 20px 0 0;
+  padding: 0 0 12px;
+  border-bottom: 2px solid #61AFAA;
+  background: transparent;
+}
+
+.construction__filter-list:nth-last-child(1) {
+  margin: 0;
+}
+
+.construction__filter-list::after {
+  content: '';
+  position: absolute;
+  top: 1em;
+  right: 0;
+  width: 18px;
+  height: 12px;
+  z-index: 115;
+  background: url("/wp-content/themes/pokrovsky/assets/images/icon/arrow-small.svg") no-repeat center;
+}
+
+.construction__filter-year {
+  display: none;
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  color: #EAF1FF;
+  cursor: pointer;
+}
+
+.construction__filter-year span {
+  pointer-events: none;
+}
+
+.construction__filter-year:hover:not(.active) {
+  color: #61AFAA;
+}
+
+.construction .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 43px 33px 33px;
+  margin-bottom: 20px;
+  border: 7px solid #61AFAA;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.construction .card__date {
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: #7B9AB4;
+  margin-bottom: 10px;
+}
+
+.construction .card__date-icon {
+  margin-right: 20px;
+  display: inline-block;
+  height: 18px;
+  width: 16px;
+  fill: #7B9AB4;
+  -webkit-transition: fill 0.4s ease-out;
+  -o-transition: fill 0.4s ease-out;
+  transition: fill 0.4s ease-out;
+}
+
+.construction .card__img {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 60px;
+}
+
+.construction .card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.construction .card__button {
+  position: relative;
+  height: 90px;
+  margin: auto auto 0 55px;
+  padding: 20px 0 0;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1em;
+  color: #EAF1FF;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.construction .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 86, 119, 0.7);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in 0s;
+  -o-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
+}
+
+.construction .popup.popup__active {
+  -webkit-transition: all 0.5s ease-in 0.2s;
+  -o-transition: all 0.5s ease-in 0.2s;
+  transition: all 0.5s ease-in 0.2s;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: painted;
+}
+
+.construction .popup__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 120px;
+  height: 94px;
+  z-index: 5;
+  background: #61AFAA;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.construction .popup__close:after, .construction .popup__close:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #FFFFFF;
+  -webkit-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.construction .popup__close:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.construction .popup__close:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.construction .popup__close:hover:after, .construction .popup__close:hover:before {
+  background: #2f5677;
+}
+
+.construction .popup__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 140px;
+  width: 100%;
+}
+
+.construction .popup__date svg {
+  display: inline-block;
+  height: 18px;
+  width: 16px;
+  fill: #EAF1FF;
+  margin-right: 20px;
+}
+
+.construction .popup__date-text {
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.6em;
+  color: #EAF1FF;
+}
+
+.construction .popup__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 140px - 140px);
+}
+
+.construction .popup__image {
+  display: inline-block;
+  padding: 0 10px;
+  height: 100%;
+}
+
+.construction .popup__image img {
+  height: calc(100vh - 140px - 140px);
+  width: inherit;
+  margin: 0 auto;
+}
+
+.construction .popup__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 140px;
+  width: 100%;
+}
+
+.construction .popup__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.construction .popup__left svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  fill: #EAF1FF;
+}
+
+.construction .popup__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.construction .popup__right svg {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  fill: #EAF1FF;
+}
+
+.construction .popup__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  height: 45%;
+  z-index: -1;
+}
+
+input {
+  display: none;
+}
+
+.select__items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 0 10px;
+  background: #2F5677;
+  z-index: 99;
+}
+
+.select__items input:checked + label {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+  display: inline;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.select__items input:checked + label.news__filter-year::after {
+  display: inline-block;
+}
+
+.select__items input:checked + label:focus .news__filter-year {
+  display: inline;
+}
+
+.select__items label {
+  pointer-events: none;
+  padding: 0 0 0 15px;
+}
+
+#year:checked ~ .select-bg, #month:checked ~ .select-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: transparent;
+}
+
+#year:checked ~ .select__items > label, #month:checked ~ .select__items > label {
+  display: inline-block;
+  pointer-events: auto;
 }

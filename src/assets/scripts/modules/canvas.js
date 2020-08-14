@@ -37,21 +37,31 @@
     //     mouse[0].setAttribute('cx', e.clientX+'px');
     //     mouse[0].setAttribute('cy', e.clientY-50+'px');
     // })
+    const path1 = 'M3.5,87.5V3.5l110,17.37v66 Z';
+    const path2 = 'M106.684 17.5151C109.285 14.9976 111.583 12.4854 113.5 10.2403V87.5H3.5V19.2335C3.6623 18.9021 3.90804 18.4337 4.24749 17.8706C4.99873 16.6243 6.19282 14.9414 7.93389 13.2566C11.3616 9.93964 17.0146 6.5 26 6.5C34.3364 6.5 40.0609 12.0191 47.3205 19.0195C54.2122 25.665 62.4119 33.5 75 33.5C87.4579 33.5 98.8283 25.1174 106.684 17.5151Z';
+    const path3 = 'M3.5,87.5v-66L113.5,3.4V87.5 Z';
     let svg = Snap('#svg-bg');
-    let figure = svg.path("M3.5 206.5L3.5 45.6431L266.5 4.09631V206.5L3.5 206.5Z");
+    let figure = svg.path(path1);
     figure.attr({
         fill:"#2F5677" ,
         fillOpacity:"0.95" ,
         stroke:"#61AFAA",
-        strokeWidth:"7"
+        strokeWidth:"7",
+        strokeLinecap:"square"
     });
     svg.hover(function () {
         console.log('in');
-        figure.animate({path:'M3.5 206.5 L3.5 45.6431 L266.5 4.09631 V206.5 L3.5 206.5Z'},'3000',mina.easeout)
+        figure.animate({'path':path3},700,mina.bounce,function () {
+            // figure.animate({'path': path3},300,mina.easeout)
+        })
     },function () {
         console.log('out');
-        // figure.animate({path:'M3.5 206.5 L3.5 45.6431 L266.5 4.09631 V206.5 L3.5 206.5Z'},'1000',mina.easeout)
+        // figure.animate({path:'M633.5 553.5V103.934L3.5 4.09831V553.5H633.5Z'},'1000',mina.easeout)
+        figure.animate({"path": path1},700,mina.backout, function () {
+            // figure.animate({"path": path1},500,mina.easeout)
+        })
     })
+
     // svg.append(figure);
     //path( d="M3.5 206.5L3.5 45.6431L266.5 4.09631V206.5L3.5 206.5Z" fill="#2F5677" fill-opacity="0.95" stroke="#61AFAA" stroke-width="7")
     //

@@ -17,6 +17,12 @@
 			height: 50px;
 		}
 	}
+	&.header-transparent{
+		.burger .bg-small svg, .burger .bg-small-right svg, .burger .bg-small-left svg{
+			fill: transparent;
+			stroke: transparent;
+		}
+	}
 }
 .logo img{
 	height: 35px;
