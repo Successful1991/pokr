@@ -51,13 +51,13 @@
     });
     svg.hover(function () {
         console.log('in');
-        figure.animate({'path':path3},700,mina.bounce,function () {
+        figure.animate({'path':path3},1400,mina.bounce,function () {
             // figure.animate({'path': path3},300,mina.easeout)
         })
     },function () {
         console.log('out');
         // figure.animate({path:'M633.5 553.5V103.934L3.5 4.09831V553.5H633.5Z'},'1000',mina.easeout)
-        figure.animate({"path": path1},700,mina.backout, function () {
+        figure.animate({"path": path1},1400,mina.backout, function () {
             // figure.animate({"path": path1},500,mina.easeout)
         })
     })

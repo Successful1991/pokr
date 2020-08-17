@@ -1,0 +1,173 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  background: #2F5677;
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 570px repeat(3,570px 200px 570px);
+    grid-gap: 30px;
+    padding: 40px 30px 90px;
+  }
+  &__el{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    &:nth-child(1){
+      clip-path: polygon(0 0,100% 230px,100% 100%,0 100%);
+    }
+    &:nth-child(2){
+      clip-path: polygon(0 230px,100% 0,100% 100%,0 100%);
+    }
+    &:nth-child(4n+3){
+      clip-path: polygon(0 0,100% 0,100% calc(100% - 230px),0 100%);
+    }
+    &:nth-child(4n+4){
+      clip-path: polygon(0 0,100% 0,100% 100%,0 calc(100% - 230px));
+    }
+    &:nth-child(4n+5){
+      clip-path: polygon(0 230px,100% 0,100% 100%,0 100%);
+    }
+    &:nth-child(4n+6){
+      clip-path: polygon(0 0,100% 230px,100% 100%,0 100%);
+    }
+
+
+    &:nth-child(1),&:nth-child(2){
+      grid-row: 1 / span 2;
+      justify-content: flex-end;
+      .about__content{
+        text-align: left;
+        background: rgba(97, 175, 170, 0.95);
+        clip-path: polygon(0 0,100% 150px,100% 100%,0 100%);
+      }
+    }
+    &:nth-child(3),&:nth-child(4){
+      grid-row: 3 / span 2;
+    }
+    &:nth-child(5),&:nth-child(6){
+      grid-row: 4 / span 2;
+      justify-content: flex-end;
+      .about__content{
+        text-align: left;
+        background: rgba(197, 138, 96, 0.95);
+        clip-path: polygon(0 0,100% 150px,100% 100%,0 100%);
+      }
+    }
+    &:nth-child(7),&:nth-child(8){
+      grid-row: 6 / span 2;
+      justify-content: flex-start;
+      .about__content{
+        text-align: left;
+        padding: 30px 42px 60px;
+        background: rgba(0, 99, 80, 0.95);
+        clip-path: polygon(0 0,100% 0,100% calc(100% - 150px),0 100%);
+      }
+    }
+    &:nth-child(9),&:nth-child(10){
+      grid-row: 7 / span 2;
+      justify-content: flex-end;
+      .about__content{
+        justify-content: flex-end;
+        text-align: right;
+        background: rgba(0, 99, 80, 0.95);
+        clip-path: polygon(0 150px,100% 0,100% 100%,0 100%);
+      }
+      .about__text{
+        margin-left: auto;
+      }
+    }
+    &:nth-child(11),&:nth-child(12){
+      grid-row: 9 / span 2;
+      justify-content: flex-start;
+      .about__content{
+        text-align: left;
+        padding: 30px 42px 60px;
+        background: rgba(0, 99, 80, 0.95);
+        clip-path: polygon(0 0,100% 0,100% calc(100% - 150px),0 100%);
+      }
+
+    }
+    &:nth-child(13),&:nth-child(14){
+      grid-row: 10 / span 2;
+      justify-content: flex-end;
+      .about__content{
+        justify-content: flex-end;
+        text-align: right;
+        background: rgba(0, 99, 80, 0.95);
+        clip-path: polygon(0 150px,100% 0,100% 100%,0 100%);
+      }
+      .about__text{
+        margin-left: auto;
+      }
+    }
+
+    &:nth-child(3){
+      justify-content: flex-start;
+      .about__content{
+        text-align: left;
+        background: rgba(97, 175, 170, 0.95);
+        padding: 30px 42px 60px;
+        clip-path: polygon(0 0,100% 0,100% calc(100% - 150px),0 100%);
+      }
+    }
+    &:nth-child(4){
+      justify-content: center;
+      padding: 0 0 150px 0;
+      .about__content{
+        text-align: left;
+        padding: 0 10px 0 150px;
+      }
+      .about__text{
+        width: 45%;
+      }
+    }
+    &:nth-child(even){
+      grid-column: 2;
+    }
+
+    &:nth-child(odd){
+      grid-column: 1;
+    }
+  }
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    padding: 60px 42px 30px;
+  }
+  &__text{
+    width: 40%;
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.6em;
+    color: #EAF1FF;
+  }
+  &__title{
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.8em;
+    text-transform: uppercase;
+    color: #EAF1FF;
+    margin-bottom: 10px;
+  }
+  &__logo{
+    width: 200px;
+    height: 175px;
+    margin-bottom: 50px;
+  }
+}
