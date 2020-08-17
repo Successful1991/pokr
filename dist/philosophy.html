@@ -16,7 +16,6 @@
     <title>Home</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="/wp-content/themes/pokrovsky/assets/styles/main.min.css">
-    <!--link(rel='stylesheet', href="/wp-content/themes/pokrovsky/static/base.css")-->
   </head>
   <body>
     <div class="preloader js-preloader">
@@ -41,7 +40,7 @@
 	
 </svg>
 
-    <header class="header">
+    <header class="header header-transparent">
       <!--a(href='/').logo-->
       <!--    img(src='/wp-content/themes/pokrovsky/assets/images/icon/Logo.svg')-->
       <button class="callback">
@@ -76,7 +75,7 @@
         <div class="burger__icon"><span></span><span></span><span></span></div>
       </div>
     </header>
-    <section class="floor">
+    <section class="philosophy">
       <!-- breadcrumb start-->
       <ul class="breadcrumb">
         <li class="breadcrumb__el"><a href="/">Главная</a></li>
@@ -86,50 +85,29 @@
         <li class="breadcrumb__el"><span>Обрати секцію</span></li>
       </ul>
       <!-- breadcrumb end-->
-      <h1 class="title"> Обрати квартиру</h1>
-      <div class="floor__filter-wrap js-floor__filter">
-        <div class="floor__filter">
-          <ul class="floor__list">
-            <div class="floor__filter-arrow"></div>
-            <li class="floor__list-el" data-section="1">1</li>
-            <li class="floor__list-el" data-section="2">2</li>
-            <li class="floor__list-el" data-section="3">3</li>
-            <li class="floor__list-el" data-section="4">4</li>
-          </ul>
-          <div class="floor__filter-current js-section-current">1</div>
-          <div class="floor__filter-name">Секція</div>
+      <h1 class="title">Вигляд</h1>
+      <div class="philosophy__bg"></div>
+      <div class="philosophy__bg-house"></div>
+      <div class="philosophy__bg-place"></div>
+      <div class="philosophy__right">Pokrovsky Apart Complex - відображення твоїх бажань.</div>
+      <div class="philosophy__left">
+        <div class="philosophy__title">Ти довго чекав цього моменту.</div>
+        <div class="philosophy__text">Моменту жити для себе. Більше не чекай. Не відкладай себе на потім. Почни жити тут і зараз. Pokrovsky Apart Complex</div>
+        <div class="philosophy__list">
+          <div class="philosophy__el">
+            <div class="philosophy__icon"></div><span>Рівне, Костромська,73,</span>
+          </div>
+          <div class="philosophy__el">
+            <div class="philosophy__icon"></div><span>Центр продажу квартир</span>
+          </div>
+          <div class="philosophy__el">
+            <div class="philosophy__icon"></div><span>067 360 28 26</span>
+          </div>
         </div>
-        <div class="floor__filter">
-          <ul class="floor__list">
-            <div class="floor__filter-arrow"></div>
-            <li class="floor__list-el" data-floor="1">1</li>
-            <li class="floor__list-el" data-floor="2">2</li>
-            <li class="floor__list-el" data-floor="3">3</li>
-            <li class="floor__list-el" data-floor="4">4</li>
-            <li class="floor__list-el" data-floor="5">5</li>
-            <li class="floor__list-el" data-floor="6">6</li>
-            <li class="floor__list-el" data-floor="7">7</li>
-          </ul>
-          <div class="floor__filter-current js-floor-current">1</div>
-          <div class="floor__filter-name">Поверх</div>
-        </div>
+        <div class="philosophy__button"></div>
       </div>
-      <div class="floor__render">
-        <svg viewBox="0 0 1920 1080" fill="transparent" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-          <image height="100%" width="100%" x="0" y="0" xlink:href="/wp-content/themes/pokrovsky/assets/images/plan.png"></image>
-        </svg>
-      </div><a class="floor__param">
-        Обрати за <br>
-        параметрами
-        <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
-</svg>
-
-        </div></a>
-      <div class="compass">пн<img src="/wp-content/themes/pokrovsky/assets/images/icon/compass.svg"></div>
-      <div class="list-flat__links"><a class="list-flat__link" href="#">1-Кімнатні</a><a class="list-flat__link" href="#">2-Кімнатні</a><a class="list-flat__link" href="#">3-Кімнатні</a></div>
     </section>
-    <footer class="footer">
+    <footer class="footer footer__small">
       <div class="menu js-menu no-scroll">
         <!-- левый список (у всех класс .menu__link-title)-->
         <div class="menu__house"><img src="/wp-content/themes/pokrovsky/assets/images/main/house.svg"></div>
@@ -191,7 +169,8 @@
     </footer>
     <!-- include ../pages/includes/forms-->
     <script src="/wp-content/themes/pokrovsky/assets/scripts/libs.js"></script>
-    <!--script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')-->
     <script src="/wp-content/themes/pokrovsky/assets/scripts/index.js"></script>
+    <script src="/wp-content/themes/pokrovsky/assets/scripts/view.js"></script>
+    <!--script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCvIwpQlmn08p4nR3bND8v3PBuMrWNMsZM&callback=initMap')-->
   </body>
 </html>

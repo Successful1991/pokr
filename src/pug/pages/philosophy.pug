@@ -1,0 +1,53 @@
+extends ../layout/main
+block variable
+block meta
+    title= 'Home'
+    meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="/wp-content/themes/pokrovsky/assets/styles/main.min.css")
+block scripts
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/libs.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/index.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/view.js')
+    //script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCvIwpQlmn08p4nR3bND8v3PBuMrWNMsZM&callback=initMap')
+
+
+block content
+    section.philosophy
+        include ./includes/breadcrumb
+        h1.title Вигляд
+        .philosophy__bg
+        .philosophy__bg-house
+        .philosophy__bg-place
+        .philosophy__right Pokrovsky Apart Complex - відображення твоїх бажань.
+        .philosophy__left
+            .philosophy__title Ти довго чекав цього моменту.
+            .philosophy__text Моменту жити для себе. Більше не чекай. Не відкладай себе на потім. Почни жити тут і зараз. Pokrovsky Apart Complex
+            .philosophy__list
+                .philosophy__el
+                    .philosophy__icon
+                    span Рівне, Костромська,73,
+                .philosophy__el
+                    .philosophy__icon
+                    span Центр продажу квартир
+                .philosophy__el
+                    .philosophy__icon
+                    span 067 360 28 26
+
+            .philosophy__button
+
+
+
+
+
+block footer
+
+    footer.footer.footer__small
+        include ../includes/menu
+        include ../includes/footer
+
+
+    // include ../pages/includes/forms
+block header
+    header.header.header-transparent
+        include ../includes/header.pug

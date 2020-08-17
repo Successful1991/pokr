@@ -2373,7 +2373,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 150px 0 0 50px;
-  z-index: 6000;
+  z-index: 300;
 }
 
 .breadcrumb__el {
@@ -6772,4 +6772,119 @@ input {
 #year:checked ~ .select__items > label, #month:checked ~ .select__items > label {
   display: inline-block;
   pointer-events: auto;
+}
+
+.view {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.view .title {
+  z-index: 9;
+}
+
+.view__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+}
+
+.view__el {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.view__el img {
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.view__arrow {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 60px;
+  height: 45px;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.view__arrow svg {
+  fill: #C58A60;
+}
+
+.view__left {
+  left: 50px;
+  -webkit-transform: translate(0, -50%) rotate(-180deg);
+  -ms-transform: translate(0, -50%) rotate(-180deg);
+  transform: translate(0, -50%) rotate(-180deg);
+}
+
+.view__right {
+  right: 50px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.view__amount {
+  position: absolute;
+  right: 50px;
+  bottom: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Mont";
+  font-weight: 600;
+  text-align: right;
+  color: #FFFFFF;
+  z-index: 6;
+}
+
+.view__amount-current {
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: 0.02em;
+  margin: 0 3px;
+}
+
+.view__amount-all {
+  font-size: 24px;
+  line-height: 1em;
+  margin: 0 3px;
+}
+
+.view__button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  margin: 0 0 0 55px;
+  font-family: "Mont";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1em;
+  text-decoration: none;
+  color: #FFFFFF;
+  z-index: 9;
 }
