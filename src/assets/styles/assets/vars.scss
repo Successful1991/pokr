@@ -40,13 +40,24 @@ body{
   --title-height: 70px;
   --title-marg: 20px;
   --title-offset: var(--title-height) + var(--title-marg);
-
+  --mrgn-button: 55px;
 }
+  @media screen and (max-width: 1440px){
+    body{
+      --mrgn-button: 35px;
+      --breadcrumb-height: 15px;
+      --breadcrumb-marg: 115px;
+      --title-marg: 10px;
+      --title-height: 36px;
+    }
+  }
   @media screen and (max-width: 1023px){
     body{
+      --header-height: 85px;
     }
   }
   @media screen and (max-width: 767px){
     body{
+      --breadcrumb-marg: 90px;
     }
   }

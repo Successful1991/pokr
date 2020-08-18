@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   align-content: flex-start;
   height: 100%;
+  min-height: 100vh;
   background: #8890A1;
   &__param{
     position: absolute;
@@ -96,8 +97,9 @@
     width: 100%;
     z-index: 1;
     svg{
+      display: inline-block;
       height: 100%;
-      width: initial;
+      width: 100%;
       max-height: 50vh;
       max-width: 60vw;
       margin: 0 auto;

@@ -12,7 +12,7 @@
 	height: var(--title-height);
   	font-family: "Mont";
   	font-weight: 600;
-  	font-size: 56px;
+  	font-size: min(vw(56), 56px);
   	line-height: 1em;
   	letter-spacing: 0.02em;
   	color: #FFFFFF;
@@ -163,22 +163,14 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	height: 100vh;
 	width: 100vw;
 	background: rgba(0, 0, 0, 0.2);
 	visibility: hidden;
 	z-index: 50;
-	-webkit-transition: visibility 0.3s;
-	-o-transition: visibility 0.3s;
 	transition: visibility 0.3s;
 }
 
@@ -191,69 +183,27 @@
 	position: relative;
 	width: 80px;
 	height: 80px;
-}
-.lds-spinner div {
-	transform-origin: 40px 40px;
-	animation: lds-spinner 1.2s linear infinite;
-}
-.lds-spinner div:after {
-	content: " ";
-	display: block;
-	position: absolute;
-	top: 3px;
-	left: 37px;
-	width: 6px;
-	height: 18px;
-	border-radius: 20%;
-	background: #fff;
-}
-.lds-spinner div:nth-child(1) {
-	transform: rotate(30deg);
-	animation-delay: -1s;
-}
-.lds-spinner div:nth-child(2) {
-	transform: rotate(60deg);
-	animation-delay: -0.9s;
-}
-.lds-spinner div:nth-child(3) {
-	transform: rotate(90deg);
-	animation-delay: -0.8s;
-}
-.lds-spinner div:nth-child(4) {
-	transform: rotate(120deg);
-	animation-delay: -0.7s;
-}
-.lds-spinner div:nth-child(5) {
-	transform: rotate(150deg);
-	animation-delay: -0.6s;
-}
-.lds-spinner div:nth-child(6) {
-	transform: rotate(180deg);
-	animation-delay: -0.5s;
-}
-.lds-spinner div:nth-child(7) {
-	transform: rotate(210deg);
-	animation-delay: -0.4s;
-}
-.lds-spinner div:nth-child(8) {
-	transform: rotate(240deg);
-	animation-delay: -0.3s;
-}
-.lds-spinner div:nth-child(9) {
-	transform: rotate(270deg);
-	animation-delay: -0.2s;
-}
-.lds-spinner div:nth-child(10) {
-	transform: rotate(300deg);
-	animation-delay: -0.1s;
-}
-.lds-spinner div:nth-child(11) {
-	transform: rotate(330deg);
-	animation-delay: 0s;
-}
-.lds-spinner div:nth-child(12) {
-	transform: rotate(360deg);
-	animation-delay: 0.1s;
+	div {
+		transform-origin: 40px 40px;
+		animation: lds-spinner 1.2s linear infinite;
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			top: 3px;
+			left: 37px;
+			width: 6px;
+			height: 18px;
+			border-radius: 20%;
+			background: #fff;
+		}
+		@for $i from 1 through 12{
+			&:nth-child(#{$i}) {
+				transform: rotate((#{$i} *30)deg);
+				animation-delay: (#{$i} + 0.1)s;
+			}
+		}
+	}
 }
 
 @keyframes lds-spinner {
@@ -268,50 +218,50 @@
 
 
 
-@media screen and (min-width: 1600px){
+@media screen and (max-width: 1440px){
 	.title{
 		//margin-top: 40px;
-		//font-size: 66px;
+		font-size: 36px;
 		//line-height: 68px;
 	}
-}
-@media screen and (min-width: 1900px){
-	.title{
-		//font-size: 72px;
-		//line-height: 72px;
-		//margin-top: 70px;
+	.icon{
+		&--point{
+			height: 17px;
+			width: 13px;
+		}
+		&--phone{
+			height: 12px;
+			width: 12px;
+		}
 	}
 }
-
-
 
 @media screen and (max-width: 1023px){
-	//.title{
-	//	font-size: 36px;
-	//	line-height: 49px;
-	//	margin: 0 0 0 calc(20px + var(--padding-wrap));
-	//}
+	.title{
+		font-size: 30px;
+		margin-left: 20px;
+	}
 }
-
 @media screen and (max-width: 767px){
 	.title{
-		//font-size: 24px;
+		font-size: 24px;
 		//line-height: 33px;
 		//margin-top: 0;
+		margin-left: 15px;
 	}
 	.icon{
-		&--mouse{
-			height: 15px;
-			width: 10px;
-		}
-		&--fishka{
-			height: 16px;
-			width: 18px;
-		}
-		&--smarto{
-			height: 22px;
-			width: 56px;
-		}
+		//&--mouse{
+		//	height: 15px;
+		//	width: 10px;
+		//}
+		//&--fishka{
+		//	height: 16px;
+		//	width: 18px;
+		//}
+		//&--smarto{
+		//	height: 22px;
+		//	width: 56px;
+		//}
 	}
 
 

@@ -10,7 +10,7 @@ function init() {
     });
 
 
-    $('.js-call').on('click', e => {
+    $('.js-call').on('click touchstart', e => {
         e.preventDefault();
         $('.js-popup__forms').addClass('active');
         $('.js-popup__forms').find('.js-wb').addClass(['wb-show','wb-animate']);
@@ -21,7 +21,7 @@ function init() {
     });
 
 
-    $('.js-burger').on('click', e => {
+    $('.js-burger').on('click touchstart', e => {
        if( $('.js-menu').hasClass('menu-active')) {
            $('.header').removeClass('header-cursor-active');
            $('.burger__icon').removeClass('burger-close');
@@ -34,11 +34,27 @@ function init() {
        }
         // $('.js-menu').addClass('menu-active');
     });
+
     $('.js-close').on('click', e => {
         $('.js-menu').removeClass('menu-active');
     });
+    $('.lang').on('touchstart', e => {
+        $('.lang').addClass('active');
+        $(document).on('touchstart', remove);
+
+    });
+    function remove(e) {
+        if(!$(e.target).hasClass('lang-list__item')){
+            $('.lang').removeClass('active');
+            $(document).off('touchstart', remove);
+        }
+
+    }
+
 
      $(".js-form-tel").mask("(999)999-9999");
+
+
     //
     // $('.js-form__submit').on('click',function(e) {
     //     e.preventDefault();
