@@ -116,6 +116,7 @@ block head
 block scripts
     script(src='/wp-content/themes/pokrovsky/assets/scripts/libs.js')
     //script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/snap.svg.js')
     script(src='/wp-content/themes/pokrovsky/assets/scripts/index.js')
     script(src='/wp-content/themes/pokrovsky/assets/scripts/flatFilter.js')
 
@@ -136,11 +137,13 @@ block content
                             .chooseFlat__card-info
                                 span Загальна площа:
                                 span= val.total_square
-                                    sub м2
+                                    | м
+                                    sub 2
                             .chooseFlat__card-info
                                 span Житлова площа:
                                 span= val.life_square
-                                    sub м2
+                                    | м
+                                    sub 2
                             .chooseFlat__card-info
                                 span Поверх:
                                 span= val.floor
@@ -182,6 +185,7 @@ block content
                             span Фільтрувати <br> за параметрами
                             .bg-small-left
                                 include ../../static/small-house.php
+                        button(type="button").js-button_clear.filter-button_clear
                     .filter-result-block__header
                         p.res-text За вашими параметрами <br>знайдено
                             span.number_flats.js-number_flats

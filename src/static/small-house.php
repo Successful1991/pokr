@@ -1,3 +1,3 @@
-<svg viewBox="0 0 117 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M113.5 3.5L3.5 15V87.5H113.5V3.5Z" />
+<svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>

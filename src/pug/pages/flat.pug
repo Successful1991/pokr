@@ -9,6 +9,7 @@ block head
 block scripts
     script(src='/wp-content/themes/pokrovsky/assets/scripts/libs.js')
     //script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/snap.svg.js')
     script(src='/wp-content/themes/pokrovsky/assets/scripts/index.js')
 
 
@@ -18,7 +19,7 @@ block content
         h1.title  Квартира 2С1
         .flat__content
             .flat__left
-                a(href="/").flat__param
+                a(href="/").flat__param.button-hover
                     |Обрати за <br>
                     |параметрами
                     .bg-small-left
@@ -41,41 +42,47 @@ block content
                         .flat__data-name Передпокій:
                         .flat__data-res
                             span.js-flat__data 16.32
-                            sup м2
+                            | М
+                            sub 2
                     li.flat__data-el
                         .flat__data-name Кухня-їдальня:
                         .flat__data-res
-                            span.js-flat__data 15.56
-                            sup м2
+                            span.js-flat__data 5.5
+                            | М
+                            sub 2
                     li.flat__data-el
                         .flat__data-name Спальня 1:
                         .flat__data-res
                             span.js-flat__data 13.85
-                            sup м2
+                            | М
+                            sub 2
                     li.flat__data-el
                         .flat__data-name Спальня 2:
                         .flat__data-res
-                            span.js-flat__data 16.32
-                            sup м2
+                            span.js-flat__data 126.32
+                            | М
+                            sub 2
                     li.flat__data-el
                         .flat__data-name Спальня 3:
                         .flat__data-res
                             span.js-flat__data 15.56
-                            sup м2
+                            | М
+                            sub 2
                     li.flat__data-el
                         .flat__data-name Вітальня:
                         .flat__data-res
                             span.js-flat__data 13.85
-                            sup м2
+                            | М
+                            sub 2
 
 
 
 
         .list-buttons
-            a(href='#').list-flat__button Завантажити </br> PDF планування
+            a(href='#').list-flat__button.button-hover Завантажити </br> PDF планування
                 .bg-small-left
                     include ../../static/small-house.php
-            a(href='#').list-flat__button Дізнатися </br> ціну
+            a(href='#').list-flat__button.button-hover Дізнатися </br> ціну
                 .bg-small-left
                     include ../../static/small-house.php
 
@@ -83,7 +90,7 @@ block footer
     footer.footer
         include ../includes/menu
         include ../includes/footer
-    // include ../pages/includes/forms
+        include ../pages/includes/forms
 
 block header
     header.header

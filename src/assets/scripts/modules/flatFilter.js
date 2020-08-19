@@ -102,7 +102,7 @@
     const elemsWichMakeFilter = {
         ranges: $('.js-range-init'),
         searchBtn: document.querySelector('.js-button_search'),
-        // resetBtn: document.querySelector('.js-reset_button'),
+        resetBtn: document.querySelector('.js-button_clear'),
         numberFlats: document.querySelector(".js-number_flats"),
         rows: document.querySelectorAll('.js-flat-item'), // все карточки с квартирами
         checkbox: [
@@ -117,7 +117,7 @@
                 typeData: 'array'
             },
         ],
-    }
+    };
 
     // Записывает все квартиры в отдельный массив
     let appartments = [];
@@ -248,32 +248,32 @@
 
 
     // Обнуление данных методы плагина
-    // elemsWichMakeFilter.resetBtn.addEventListener('click', function (e) {
-    //     const ch = $('.js-checkbox-project');
-    //     ch.prop('checked', false);
-    //
-    //     elemsWichMakeFilter.checkbox.forEach((el)=>{
-    //         el.DOMElem.prop('checked', false);
-    //     });
-    //
-    //     elemsWichMakeFilter.ranges.each(function (i, slider) {
-    //         const range = $(slider).data("ionRangeSlider");
-    //
-    //         range.update({
-    //             from: range.options.min,
-    //             to: range.options.max
-    //         });
-    //
-    //         setValue(range.input, range.options, ['from', 'to']);
-    //     });
-    //     appartments.forEach(function (appartment) {
-    //         appartment.flat.style.display = 'block';
-    //         validDBTable = [];
-    //         validDBTable.push(appartment);
-    //     });
-    //     elemsWichMakeFilter.numberFlats.innerHTML = appartments.length;
-    //
-    // });
+    elemsWichMakeFilter.resetBtn.addEventListener('click', function (e) {
+        const ch = $('.js-checkbox-project');
+        ch.prop('checked', false);
+
+        elemsWichMakeFilter.checkbox.forEach((el)=>{
+            el.DOMElem.prop('checked', false);
+        });
+
+        elemsWichMakeFilter.ranges.each(function (i, slider) {
+            const range = $(slider).data("ionRangeSlider");
+
+            range.update({
+                from: range.options.min,
+                to: range.options.max
+            });
+
+            setValue(range.input, range.options, ['from', 'to']);
+        });
+        appartments.forEach(function (appartment) {
+            appartment.flat.style.display = 'block';
+            validDBTable = [];
+            validDBTable.push(appartment);
+        });
+        elemsWichMakeFilter.numberFlats.innerHTML = appartments.length;
+
+    });
 
     // handlers for manualy setting input val
 

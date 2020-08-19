@@ -9,6 +9,7 @@ block head
 block scripts
     script(src='/wp-content/themes/pokrovsky/assets/scripts/libs.js')
     //script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/snap.svg.js')
     script(src='/wp-content/themes/pokrovsky/assets/scripts/index.js')
 
 
@@ -19,17 +20,17 @@ block content
         .floor__filter-wrap.js-floor__filter
             .floor__filter
                 ul.floor__list
-                    .floor__filter-arrow
+
                     li(data-section='1').floor__list-el 1
                     li(data-section='2').floor__list-el 2
                     li(data-section='3').floor__list-el 3
                     li(data-section='4').floor__list-el 4
+                .floor__filter-arrow
                 .floor__filter-current.js-section-current 1
                 .floor__filter-name Секція
 
             .floor__filter
                 ul.floor__list
-                    .floor__filter-arrow
                     li(data-floor='1').floor__list-el 1
                     li(data-floor='2').floor__list-el 2
                     li(data-floor='3').floor__list-el 3
@@ -37,7 +38,7 @@ block content
                     li(data-floor='5').floor__list-el 5
                     li(data-floor='6').floor__list-el 6
                     li(data-floor='7').floor__list-el 7
-
+                .floor__filter-arrow
                 .floor__filter-current.js-floor-current 1
                 .floor__filter-name Поверх
 
@@ -47,7 +48,7 @@ block content
                 image( height='100%' width='100%' x="0" y="0" xlink:href='/wp-content/themes/pokrovsky/assets/images/plan.png')
 
 
-        a.floor__param
+        a(href="#" ).floor__param.button-hover
             |Обрати за <br>
             |параметрами
             .bg-small-left

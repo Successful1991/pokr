@@ -281,6 +281,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     width: 100%;
+    height: 100%;
     padding: 10px 50px 60px;
     //height: calc(100vh - (var(--title-offset) + var(--breadcrumb-offset) + 130px));
     overflow-y: auto;
@@ -301,6 +302,7 @@
         width: 100%;
         height: 10%;
         z-index: 8;
+        pointer-events: none;
       }
       &:after{
         bottom: 0;
@@ -374,18 +376,26 @@
     border: none;
     overflow: visible;
     color: #EAF1FF;
-    font-family: "Mont";
+    font-family: $default-font;
     font-weight: 600;
     font-size: 24px;
     line-height: 1em;
     text-align: left;
 
     z-index: 5;
-    margin: 30px 0 30px 50px;
+    margin: 30px 0 30px var(--mrgn-button);
     svg{
       fill: #C58A60;
       stroke: #C58A60;
     }
+  }
+  &-button_clear{
+    border: none;
+    display: inline-block;
+    width: 17px;
+    height: 22px;
+    margin: 0 0 0 auto;
+    background: url("../images/icon/remove.svg") no-repeat center/cover;
   }
   &-scroll{
     &-wrap{
@@ -395,6 +405,10 @@
     }
   }
   &-nav-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin-bottom: 40px;
   }
 }
@@ -432,4 +446,84 @@ input:checked+.u-filter__checkbox__label{
 }
 .invisible{
   display: none;
+}
+
+
+@media screen and (max-width: 1440px){
+  .chooseFlat{
+    &__list{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 0 30px;
+    }
+    &__card{
+      padding: 50px 20px 20px;
+      &-info{
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &__filter{
+      padding: 10px 35px 35px;
+      &-head{
+        height: 70px;
+        flex: 0 0 70px;
+      }
+      &-wrap{
+        height: initial;
+        min-width: 340px;
+        margin-top: -40px;
+        margin-bottom: auto;
+        &::before{
+          top: 65px;
+        }
+      }
+    }
+
+  }
+  .filter{
+    &-button{
+      &_search{
+        font-size: 18px;
+        line-height: 1em;
+      }
+    }
+    &-nav-btn{
+      margin-bottom: 15px;
+    }
+  }
+  .u-filter__title{
+    font-size: 14px;
+  }
+  .u-filter-icon, .u-filter__checkbox,.u-filter__checkbox__label svg,.u-filter__checkbox__label{
+    height: 30px;
+    width: 30px;
+  }
+  .u-filter-icon, .u-filter__checkbox{
+    margin: 0 3px;
+  }
+  .range-item__label{
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+  .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+    font-size: 14px;
+  }
+  .range-item{
+    margin-bottom: 10px;
+  }
+  .filter-button_search{
+    font-size: 18px;
+    margin: 20px 0 20px var(--mrgn-button);
+
+  }
+  .filter-result-block__header{
+       font-size: 14px;
+       line-height: 18px;
+    }
+}
+@media screen and (max-width: 1023px){
+
+}
+@media screen and (max-width: 767px){
+
 }

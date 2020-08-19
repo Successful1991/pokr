@@ -68,12 +68,12 @@
 	.footer__small{
 		.footer{
 			&__logo{
-				width: 160px;
-				height: 124px;
+				width: 130px;
+				height: 101px;
 			}
 			&__developer{
-				width: 174px;
-				height: 38px;
+				width: 143px;
+				height: 31px;
 				margin: 0 20px 0 auto;
 			}
 			&__smarto{
@@ -86,12 +86,12 @@
 	}
 	.footer{
 		&__logo{
-			width: 160px;
-			height: 124px;
+			width: 130px;
+			height: 101px;
 		}
 		&__developer{
-			width: 174px;
-			height: 38px;
+			width: 143px;
+			height: 31px;
 			margin: 0 20px 0 auto;
 		}
 		&__smarto{
@@ -102,6 +102,7 @@
 		}
 	}
 }
+
 @media screen and (max-width: 1023px){
 	.footer__small{
 		.footer__logo{

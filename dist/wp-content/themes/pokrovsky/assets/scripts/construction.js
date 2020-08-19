@@ -8,9 +8,8 @@
         // getListImage(this.dataset.id);
         // setInfoPopup(getInfoCard(this));
 
-        let r = $(this).closest('.js-pagination__card').find('.js-card__date-text').html();
-        console.log(r);
-        $('.js-popup__date-text').html(r);
+
+        $('.js-popup__date-text').html($(this).closest('.js-pagination__card').find('.js-card__date-text').html());
         sliderInit();
         $('.js-popup').addClass('popup__active');
     });
