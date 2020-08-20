@@ -5,12 +5,15 @@
   z-index: 300;
   &__el {
     margin: 0 10px 0 0;
-
     font-family: $default-font;
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
     color: #B7BFCF;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     * {
       text-decoration: none;
     }
@@ -19,12 +22,15 @@
       border-bottom: 1px solid #EAF1FF;
     }
 
-    &::after {
+    &::before {
       content: url('../images/icon/breadcrumb.svg');
-      margin-left: 10px;
+      margin-right: 10px;
     }
-    &:nth-last-child(1):after{
+    &:nth-child(1):before{
       display: none;
+    }
+    &:nth-last-child(1){
+      flex-shrink: 1;
     }
 
   }
@@ -172,20 +178,6 @@
   .breadcrumb{
     margin-left: 20px;
   }
-  //.lang,.menu .lang {
-  //  width: 64px;
-  //}
-  //.no-scroll .lang{
-  //  &-list{
-  //    height: 50px;
-  //    padding: 9px;
-  //  }
-  //  &:hover {
-  //    .lang-list {
-  //      height: 120px;
-  //    }
-  //  }
-  //}
 }
 @media screen and (max-width: 767px){
   .lang{
@@ -196,33 +188,7 @@
   }
   .breadcrumb{
     margin-left: 15px;
+    width: calc(100% - 30px);
   }
-  //.lang,.menu .lang {
-  //  width: 40px;
-  //  &-list{
-  //    height: 40px;
-  //    &__item{
-  //      height: 30px;
-  //    }
-  //  }
-  //  &:hover {
-  //    .lang-list {
-  //      height: 100px;
-  //    }
-  //  }
-  //}
-  //.no-scroll .lang{
-  //  &-list{
-  //    height: 40px;
-  //    padding: 9px;
-  //  }
-  //  &:hover {
-  //    .lang-list {
-  //      height: 100px;
-  //    }
-  //  }
-  //}
-  //.link{
-  //  font-size: 18px;
-  //}
+
 }

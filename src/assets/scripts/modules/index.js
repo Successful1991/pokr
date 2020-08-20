@@ -24,7 +24,7 @@ function init() {
     });
 
 
-    $('.js-burger').on('click touchstart', e => {
+    $('.js-burger').on('click', e => {
        if( $('.js-menu').hasClass('menu-active')) {
            $('.header').removeClass('header-cursor-active');
            $('.burger__icon').removeClass('burger-close');

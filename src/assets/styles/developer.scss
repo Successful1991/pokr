@@ -21,18 +21,19 @@
   &__block{
     width: 36.5%;
     margin-bottom: 55px;
+    padding: 0 10px 0 0;
     &-title{
       font-family: $default-font;
       font-weight: 600;
-      font-size: 24px;
+      font-size: min(vw(24), 24px);
       line-height: 1.6em;
       color: $wc;
-      margin-bottom: 30px;
+      margin-bottom: 1.6em;
     }
     &-text{
       font-family: $default-font;
       font-weight: 600;
-      font-size: 18px;
+      font-size: min(vw(18), 18px);
       line-height: 1.8em;
       color: $wc;
       margin-bottom: 30px;
@@ -66,13 +67,13 @@
     &-el{
       position: relative;
       align-items: center;
-      font-family: "Mont";
+      font-family: $default-font;
       font-weight: 600;
-      font-size: 18px;
+      font-size: min(vw(18), 18px);
       line-height: 1.8em;
       color: #EAF1FF;
 
-      margin-bottom: 32px;
+      margin-bottom: 1.8em;
       &:nth-last-child(1){
         margin: 0;
       }
@@ -109,11 +110,136 @@
   &__title{
     font-family: "Mont";
     font-weight: 600;
-    font-size: 36px;
+    font-size: min(vw(36), 36px);
     line-height: 1.5em;
     letter-spacing: 0.02em;
     color: #EAF1FF;
 
     padding: 35px 60px;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  .developer{
+    max-height: none;
+    padding: 0 0 100px;
+    &__content{
+      width: inherit;
+      max-width: 810px;
+    }
+    &__block{
+      width: 50%;
+      &-title{
+        font-size: 18px;
+        line-height: 32px;
+      }
+      &-text{
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &__logo{
+      width: 200px;
+      height: 45px;
+      margin-bottom: 20px;
+      margin-top: 25px;
+    }
+    &__house{
+      padding: 90px 5% 45px;
+    }
+    &__line{
+      border-bottom-width: 4px;
+      margin-bottom: 50px;
+    }
+    &__list{
+
+      &-el{
+        font-size: 14px;
+      }
+      &-dots{
+        padding-left: 20px;
+        li:after{
+          left: -22px;
+        }
+      }
+
+    }
+    &__border{
+      width: 100%;
+      padding: 0;
+    }
+    &__title{
+      padding: 25px 35px;
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .developer{
+    padding: 0 20px 70px;
+    &__content{
+      padding: 10px 0 0;
+    }
+    &__house{
+      padding: 85px 35px 30px;
+      margin-bottom: 30px;
+    }
+    &__line{
+      margin-bottom: 30px;
+    }
+    &__title{
+      font-size: 24px;
+    }
+    &__border{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .developer{
+    padding: 0 0 90px;
+    &__block{
+      width: 100%;
+      margin-bottom: 20px;
+      &-title{
+        margin-bottom: 10px;
+      }
+    }
+    &__content{
+      max-width: 320px;
+      padding: 0 15px;
+    }
+    &__logo{
+      width: 160px;
+      height: 36px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    &__house{
+      background: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    &__line{
+      margin-bottom: 20px;
+      border-bottom-width: 2px;
+    }
+    &__list{
+      padding-left: 25px;
+      &-tick li:after{
+        left: -25px;
+      }
+    }
+    &__border{
+      padding: 10px 15px;
+      border-width: 2px;
+    }
+    &__title{
+      padding: 0;
+      font-size: 18px;
+      line-height: 32px;
+    }
   }
 }

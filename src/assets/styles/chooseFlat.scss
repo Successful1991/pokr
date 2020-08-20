@@ -209,7 +209,7 @@
   background: #8890A1;
   &__content{
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     align-content: flex-start;
     justify-content: space-between;
 
@@ -247,6 +247,10 @@
         top: 0;
         background: linear-gradient(180deg, #8890A1 0%, rgba(136, 144, 161, 0) 100%);
       }
+
+    }
+    &::-webkit-scrollbar{
+      width: 0;
     }
   }
   &__card{
@@ -320,6 +324,7 @@
       height: 140px;
       background: #2F5677;
       z-index: 6;
+      margin: 1px 0px -1px;
       clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 70%);
     }
   }
@@ -522,8 +527,79 @@ input:checked+.u-filter__checkbox__label{
     }
 }
 @media screen and (max-width: 1023px){
-
+  .chooseFlat{
+    &__list{
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0 25px;
+      &-wrap{
+        flex-grow: 1;
+        margin: 0 30px 0 20px;
+      }
+    }
+    &__filter{
+      padding: 10px 20px 35px;
+      &-head{
+        height: 40px;
+        flex: 0 0 40px;
+      }
+      &-wrap{
+        height: initial;
+        min-width: 250px;
+        margin-top: auto;
+        margin-bottom: auto;
+        &::before{
+          top: 40px;
+        }
+      }
+    }
+  }
+  .filter-button_search{
+    font-size: 14px;
+    margin: 20px 0 20px 20px;
+    .bg-small-left{
+      transform: translate(-20px, -55%);
+    }
+  }
 }
 @media screen and (max-width: 767px){
-
+  .chooseFlat{
+    height: inherit;
+    &__content{
+      flex-direction: column-reverse;
+      margin: 30px 0 0;
+    }
+    &__list{
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      padding: 0 50px;
+      &-wrap{
+        flex-grow: 1;
+        height: inherit;
+        width: 100%;
+        margin: 0 0 80px;
+        &:after,&:before{
+          position: fixed;
+        }
+      }
+    }
+    &__card{
+      &-img{
+        margin: 0 auto 15px;
+      }
+    }
+    &__filter{
+      padding: 10px 20px 35px;
+      &-head{
+        display: none;
+      }
+      &-wrap{
+        height: initial;
+        min-width: 250px;
+        margin: 0 auto 20px;
+        &::before,&::after{
+          display: none;
+        }
+      }
+    }
+  }
 }

@@ -65,7 +65,7 @@
 	}
 }
 @media screen and (max-width: 1440px){
-	.footer__small{
+	.footer__middle,.footer__small{
 		.footer{
 			&__logo{
 				width: 130px;
@@ -104,23 +104,31 @@
 }
 
 @media screen and (max-width: 1023px){
-	.footer__small{
+	.footer__middle,.footer__small{
 		.footer__logo{
-			width: 166px;
-			height: 129px;
+			width: 100px;
+			height: 78px;
+		}
+		&__developer{
+			width: 174px;
+			height: 38px;
 		}
 	}
 	.footer{
 		padding: 0 20px 20px;
 		&__logo{
-			width: 166px;
-			height: 129px;
+			width: 100px;
+			height: 78px;
+		}
+		&__developer{
+			width: 174px;
+			height: 38px;
 		}
 	}
 }
 
-@media screen and (max-width: 480px){
-	.footer__small{
+@media screen and (max-width: 767px){
+	.footer__middle,.footer__small{
 		.footer__logo{
 			width: 92px;
 			height: 72px;
@@ -138,6 +146,7 @@
 		}
 	}
 	.footer{
+		position: fixed;
 		padding: 0 15px 20px;
 		&__logo{
 			width: 92px;
