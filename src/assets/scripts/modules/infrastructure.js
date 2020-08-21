@@ -128,7 +128,6 @@ function setMap(data) {
 
 	// Функция добавления маркеров, берёт значение из масива вносит их в переменные и используя метод гугл API new google.maps.Marker клепает маркера
 	function addMarker(marker) {
-
 		var category = marker[4];
 		var title = marker[1];
 		var pos = new google.maps.LatLng(marker[2], marker[3]);
@@ -282,11 +281,41 @@ let styleMap = [
 };
 
 function initMap(){
-    $.ajax({
-            method: 'GET',
-            url: 'url',
-            data: 'action=infrastructure',
-    }).done(function(data) {
-        setMap(JSON.parse(data));
-    })
+    // $.ajax({
+    //         method: 'GET',
+    //         url: 'url',
+    //         data: 'action=infrastructure',
+    // }).done(function(data) {
+    //     setMap(JSON.parse(data));
+    // })
+    let data = {
+        main: {
+            cor: "48.464467, 35.049480"
+        },
+        points:[
+            {cor:"8.464338, 35.048850", categorie: 'shops', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-supermarket.svg', name:'Vape Shop Black&White'},
+            {cor:"8.464469, 35.047151", categorie: 'shops', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-supermarket.svg', name:'ТЦ "Пассаж"'},
+            {cor:"8.466190, 35.051372", categorie: 'shops', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-supermarket.svg', name:'ТЦ "МОСТ-Cити"'},
+            {cor:"8.462351, 35.048706", categorie: 'shops', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-supermarket.svg', name:'Книжный магазин "Книгарня Є"'},
+            {cor:"8.463692, 35.050218", categorie: 'shops', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-supermarket.svg', name:'Магазин электроники "Цитрус"'},
+            {cor:"8.464220, 35.050568", categorie: 'shops', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-supermarket.svg', name:'Продовольственный магазин "Натуральні продукти"'},
+            {cor:"0.483139, 30.668966", categorie: 'shops', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-supermarket.svg', name:'COLLABA. СИР ТА ВИНО'},
+            {cor:"0.476591, 30.674436", categorie: 'study', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-study.svg', name: 'Школа № 23'},
+            {cor:"0.470772, 30.667248", categorie: 'parks', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-park.svg', name: 'Веселка'},
+            {cor:"8.467819, 35.049952", categorie: 'kids' , image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-kids.svg', name: 'Детский магазин "Антошка"'},
+            {cor:"50.477708, 30.668332", categorie: 'gym', image: '/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-market.svg', name: 'КСК Дарвін'},
+            {cor:"48.468098, 35.053812", categorie: 'entertainment', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/map-marker-enterteiment.svg', name: 'Днепропетровский государственный цирк'},
+            {cor:"48.464044, 35.048472", categorie: 'restaurant', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-cafe.svg', name: 'Ресторан "Шредингер"'},
+            {cor:"48.465112, 35.046061", categorie: 'restaurant', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-cafe.svg', name: 'МакДональдз'},
+            {cor:"48.466685, 35.050679", categorie: 'restaurant', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-cafe.svg', name: 'МакДональдз'},
+            {cor:"48.462460, 35.048855", categorie: 'restaurant', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/point-cafe.svg', name: 'Lviv Croissants'},
+            {cor:"48.464467, 35.049480", categorie: 'main', image:'/wp-content/themes/pokrovsky/assets/images/point.svg', name: 'PSHKN'},
+            {cor:"48.460979, 35.050869", categorie: 'hotel', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/hospital-hotel.svg', name: 'SOHO boutique hotel'},
+            {cor:"48.466199, 35.051686", categorie: 'hotel', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/hospital-hotel.svg', name: 'Seven Eleven'},
+            {cor:"48.466819, 35.051029", categorie: 'hotel', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/hospital-hotel.svg', name: 'Апартамент-Отель Панорама'},
+            {cor:"48.465840, 35.042614", categorie: 'hotel', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/hospital-hotel.svg', name: 'Grand Hotel Ukraine'},
+            {cor:"48.463878, 35.053355", categorie: 'business', image:'/wp-content/themes/pokrovsky/assets/images/infrastructure/icon/map-marker-business.svg', name: 'Деловой центр "Менора"'},
+        ],
+    };
+    setMap(data);
 }
