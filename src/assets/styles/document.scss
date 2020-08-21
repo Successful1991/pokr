@@ -12,7 +12,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
     grid-gap: 0 5%;
-    width: 100%;
+    width: 90%;
     max-width: 1550px;
     margin: 0 auto;
   }
@@ -29,10 +29,10 @@
   margin-bottom: 50px;
   &__button{
     position: relative;
-    margin: auto 0 15px 55px;
+    margin: auto 0 15px var(--mrgn-button);
     font-family: "Mont";
     font-weight: 600;
-    font-size: 24px;
+    font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #EAF1FF;
     text-decoration: none;
@@ -44,8 +44,8 @@
   &__text{
     font-family: "Mont";
     font-weight: 600;
-    font-size: 24px;
-    line-height: 38px;
+    font-size: min(vw(24), 24px);
+    line-height: lh(38,24);
     color: #EAF1FF;
   }
   &__bg{
@@ -55,5 +55,63 @@
     display: inline-block;
     height: 100%;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  .documents{
+    &__wrap{
+      grid-gap: 30px;
+    }
+  }
+  .document{
+    margin: 0;
+    min-height: 330px;
+    padding: 70px 35px 30px;
+    &__text{
+      font-size: 18px;
+      line-height: lh(32,18);
+    }
+    &__button{
+      font-size: 18px;
+    }
+    &__icon{
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px){
+  .documents{
+    &__wrap{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: center;
+    }
+  }
+  .document{
+    width: 45%;
+    margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .document{
+    width: 100%;
+    max-width: 350px;
+    min-height: 230px;
+    padding: 50px 15px 20px;
+    &__text{
+      font-size: 14px;
+      line-height: lh(24,14);
+      margin-bottom: 30px;
+    }
+    &__button{
+      font-size: 16px;
+      margin: auto 0 5px var(--mrgn-button);
+    }
   }
 }
