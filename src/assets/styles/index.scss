@@ -113,11 +113,19 @@
   }
 }
 
+@media screen and (max-width: 1023px){
+  .bg-small svg, .bg-small-right svg, .bg-small-left svg{
+    stroke-width: 4px;
+  }
+}
 @media screen and (max-width: 767px){
   .bg{
     &-small{
       width: 67px;
       height: 52px;
     }
+  }
+  .bg-small svg, .bg-small-right svg, .bg-small-left svg{
+    stroke-width: 2px;
   }
 }

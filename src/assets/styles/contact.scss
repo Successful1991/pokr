@@ -9,18 +9,13 @@
   }
   &__wrap{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start;
     width: 90%;
-    //min-height: 100vh;
-    //height: calc(100vh - (var(--title-offset) + var(--breadcrumb-offset) + 150px));
     max-width: 1550px;
     margin: 0 auto;
   }
   &__maps{
-    //height: 100%;
-    //overflow-y: auto;
     margin-bottom: 30px;
     img{
       height: 100%;
@@ -28,43 +23,31 @@
     }
   }
   &__info{
-    //height: 100%;
     padding-top: 80px;
     margin-top: -90px;
     margin-bottom: 30px;
-    //overflow-y: auto;
   }
   &__forms{
     margin-top: -90px;
     position: relative;
     margin-bottom: 30px;
-    //height: 100%;
-    //&:before{
-    //  content: '';
-    //  position: absolute;
-    //  top: 0;
-    //  left: 0;
-    //  width: 100%;
-    //  height: 100px;
-    //  background: linear-gradient(180deg, #8890A1 0%, rgba(136, 144, 161, 0) 70%);
-    //}
   }
   .info{
     &__list{
       padding: 0 10px 0 50px;
     }
     &__el{
-      font-family: "Mont";
+      font-family: $default-font;
       font-weight: 600;
       color: #EAF1FF;
       margin-bottom: 1em;
     }
     &__title{
-      font-size: 24px;
+      font-size: min(vw(24), 24px);
       line-height: 1.6em;
     }
     &__text{
-      font-size: 18px;
+      font-size: min(vw(18), 18px);
       line-height: 1.8em;
     }
     &__icon{
@@ -72,7 +55,7 @@
       &:before{
         content: '';
         position: absolute;
-        top: 50%;
+        top: 0.5em;
         left: -40px;
         transform: translate(0, -50%);
         display: inline-block;
@@ -103,8 +86,6 @@
   display: flex;
   flex-direction: column;
   padding: 85px 70px 10px;
-  //height: 100%;
-  //overflow-y: auto;
   border-left: 7px solid #EAF1FF;
   border-right: 7px solid #EAF1FF;
   clip-path: polygon(0 70px,100% 0,100% 100%,0 100%, 0 70px);
@@ -131,30 +112,25 @@
     flex-direction: column;
   }
   &__title{
-    font-family: "Mont";
+    font-family: $default-font;
     font-weight: 600;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: min(vw(36), 36px);
+    line-height: lh(48,36);
     letter-spacing: 0.02em;
     color: #EAF1FF;
     margin-bottom: 40px;
   }
   &__label{
     position: relative;
-    //font-family: "Mont";
-    //font-weight: 600;
-    //font-size: 24px;
-    //line-height: 1em;
-    //color: #EAF1FF;
   }
   &__input{
     display: inline-block;
     width: 100%;
     height: 45px;
 
-    font-family: "Mont";
+    font-family: $default-font;
     font-weight: 600;
-    font-size: 24px;
+    font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #EAF1FF;
     resize: none;
@@ -164,12 +140,12 @@
     padding: 0 0 20px;
     margin-bottom: 40px;
     &::-webkit-scrollbar{
-      width: 0px;
+      width: 0;
     }
     &::placeholder{
-      font-family: "Mont";
+      font-family: $default-font;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 1em;
       line-height: 1em;
       color: #EAF1FF;
     }
@@ -178,7 +154,7 @@
     position: absolute;
     bottom: 45px;
     left: 0;
-    font-family: "Mont";
+    font-family: $default-font;
     font-weight: 500;
     font-size: 12px;
     line-height: 1em;
@@ -186,16 +162,139 @@
   }
   &__submit{
     position: relative;
-    font-family: "Mont";
+    font-family: $default-font;
     font-weight: 600;
-    font-size: 24px;
+    font-size: min(vw(24), 24px);
     line-height: 1em;
     text-align: center;
     color: #EAF1FF;
     background: transparent;
     border: none;
     padding: 40px 0;
-    margin: 0 55px 0 auto;
+    margin: 0 var(--mrgn-button) 0 auto;
     z-index: 1;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  .contact{
+    &__wrap{
+      justify-content: space-around;
+    }
+    &__forms{
+      margin: auto 0;
+    }
+    &__info{
+      margin: auto 0;
+      padding: 0;
+    }
+    .info__title{
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    .info__text{
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+  }
+  .form{
+    padding: 40px 30px 0;
+    border-width: 4px;
+    clip-path: polygon(0 45px, 100% 0, 100% 100%, 0 100%, 0 45px);
+    &__title{
+      font-size: 30px;
+      line-height: lh(42,30);
+      margin-bottom: 25px;
+    }
+    &__input{
+      padding: 0 0 10px;
+      margin: 0 0 20px;
+      font-size: 18px;
+    }
+    &__submit{
+      font-size: 18px;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .contact{
+    padding: 0 0 110px;
+    &__wrap{
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 0 80px;
+    }
+    &__maps{
+      width: calc(50% - 10px);
+      margin: 0 20px 0 0;
+    }
+    &__forms{
+      width: calc(50% - 10px);
+    }
+    &__info{
+      order: 2;
+      width: 100%;
+      margin: 20px 0 0;
+      column-count: 2;
+    }
+  }
+  .info__el{
+    break-inside: avoid;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .contact{
+    padding: 0 0 110px;
+    &__wrap{
+      justify-content: center;
+      padding: 0 15px;
+    }
+    &__maps{
+      width: calc(100% - 40px);
+      margin: 0 20px;
+    }
+    &__forms{
+      margin: 20px 0 0;
+      width: calc(100% - 40px);
+    }
+    &__info{
+      margin: 20px 0 0;
+      column-count: 1;
+    }
+    .info__text{
+
+    }
+    .info__list{
+      padding: 0 10px 0 30px;
+    }
+    .info__icon:before{
+      left: -30px;
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .form{
+    padding: 40px 15px 0;
+    border-width: 2px;
+    &__title{
+      font-size: 24px;
+      line-height: lh(30,24);
+      margin-bottom: 15px;
+    }
+    &__input{
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    &__submit{
+      font-size: 16px;
+      padding: 20px 0 15px;
+    }
   }
 }
