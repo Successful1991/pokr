@@ -1,3 +1,4 @@
+
 (function () {
     // console.log('news');
     // const heightWrap = $('.others__wrap').height();
@@ -14,7 +15,9 @@
     //     $('.js-scroll__toddler').css({'height':heightToddler+'%','top': top+'%'});
     //     console.log(top);
     // })
-    initScroll();
+
+
+    // initScroll();
 })();
 
 function initScroll() {
@@ -31,6 +34,7 @@ function initScroll() {
         console.log('load', param);
         $('.js-scroll__toddler').css({'height': param.heightToddler +'%'});
     });
+
     window.addEventListener('resize', ()=> {
         param = updateParamScroll();
         console.log('resize',param);

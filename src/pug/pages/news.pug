@@ -12,7 +12,8 @@ block scripts
     //script(src='/wp-content/themes/pokrovsky/assets/scripts/scroll.js')
     script(src='/wp-content/themes/pokrovsky/assets/scripts/snap.svg.js')
     script(src='/wp-content/themes/pokrovsky/assets/scripts/index.js')
-    //script(src='/wp-content/themes/pokrovsky/assets/scripts/news.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/libs/vendors.bundle.js')
+    script(src='/wp-content/themes/pokrovsky/assets/scripts/libs/menu.bundle.js')
 
 
 
@@ -85,19 +86,19 @@ block content
                 .news__button.button-hover Дивитися <br > новину
                     .bg-small-left
                         include ../../static/small-house.php
-            .pagination.js-pagination
-                .pagination__arrow.pagination__arrow--left( disabled data-page="prev")
-                    svg( width="7" height="12" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg")
-                        path( fill-rule="evenodd" clip-rule="evenodd" d="M5.99999 12.0001L7 11.0001L1.99992 6.00002L6.99993 1.00001L5.99993 -4.37146e-08L-0.000110412 6.00004L0.999896 7.00004L0.999913 7.00003L5.99999 12.0001Z")
-                ul.dots
-                    li.dots__element.active( data-page="1") 1
-                    li.dots__element( data-page="2") 2
-                    li.dots__element( data-page="3") 3
-                    li.dots__element( data-page="4") 4
-                    li.dots__element( data-page="5") 5
-                .pagination__arrow.pagination__arrow--right(data-page="next")
-                    svg( width="7" height="12" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg")
-                        path( fill-rule="evenodd" clip-rule="evenodd" d="M5.99999 12.0001L7 11.0001L1.99992 6.00002L6.99993 1.00001L5.99993 -4.37146e-08L-0.000110412 6.00004L0.999896 7.00004L0.999913 7.00003L5.99999 12.0001Z")
+        .pagination.js-pagination
+            .pagination__arrow.pagination__arrow--left( disabled data-page="prev")
+                svg( width="7" height="12" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg")
+                    path( fill-rule="evenodd" clip-rule="evenodd" d="M5.99999 12.0001L7 11.0001L1.99992 6.00002L6.99993 1.00001L5.99993 -4.37146e-08L-0.000110412 6.00004L0.999896 7.00004L0.999913 7.00003L5.99999 12.0001Z")
+            ul.dots
+                li.dots__element.active( data-page="1") 1
+                li.dots__element( data-page="2") 2
+                li.dots__element( data-page="3") 3
+                li.dots__element( data-page="4") 4
+                li.dots__element( data-page="5") 5
+            .pagination__arrow.pagination__arrow--right(data-page="next")
+                svg( width="7" height="12" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg")
+                    path( fill-rule="evenodd" clip-rule="evenodd" d="M5.99999 12.0001L7 11.0001L1.99992 6.00002L6.99993 1.00001L5.99993 -4.37146e-08L-0.000110412 6.00004L0.999896 7.00004L0.999913 7.00003L5.99999 12.0001Z")
 
 
 block footer
