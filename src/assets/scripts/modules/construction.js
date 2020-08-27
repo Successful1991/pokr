@@ -4,9 +4,8 @@
     });
 
     $('.js-construction').on('click', '.js-card__button',function (e) {
-        console.log(this.dataset.id);
-        // getListImage(this.dataset.id);
-        // setInfoPopup(getInfoCard(this));
+        $('.js-popup__date-text').html($(this).closest('.js-pagination__card').find('.js-card__date-text').html());
+        getListImage(this.dataset.id);
 
 
         $('.js-popup__date-text').html($(this).closest('.js-pagination__card').find('.js-card__date-text').html());
@@ -25,9 +24,10 @@
     function getListImage(id) {
         $.ajax({
             method: 'POST',
-            data: id
+            url: '/wp-admin/admin-ajax.php',
+            data: "action=construction&id="+id
         }).done(function (response) {
-
+            setInfoPopup(response);
         })
     }
     function sliderInit() {
@@ -40,6 +40,14 @@
             variableWidth: true,
             setPosition: 1
         });
+    }
+
+
+    function setInfoPopup(data) {
+        $('#construction__container').append(data);
+
+        sliderInit();
+        $('.js-popup').addClass('popup__active');
     }
 
 

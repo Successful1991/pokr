@@ -47,6 +47,7 @@
     font-size: min(vw(24), 24px);
     line-height: lh(38,24);
     color: #EAF1FF;
+    text-decoration: none;
   }
   &__bg{
     position: absolute;
@@ -55,6 +56,10 @@
     display: inline-block;
     height: 100%;
     width: 100%;
+  }
+  svg{
+    stroke: #61AFAA;
+    stroke-width: 7px;
   }
 }
 
@@ -82,7 +87,7 @@
   }
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1023px){
   .documents{
     &__wrap{
       display: flex;
@@ -94,6 +99,9 @@
   .document{
     width: 45%;
     margin: 0;
+  }
+  svg{
+    stroke-width: 4px;
   }
 }
 
@@ -112,6 +120,9 @@
     &__button{
       font-size: 16px;
       margin: auto 0 5px var(--mrgn-button);
+    }
+    svg{
+      stroke-width: 2px;
     }
   }
 }

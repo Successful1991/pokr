@@ -101,13 +101,15 @@
     }
   }
   &__link{
+    display: inline-block;
+    width: 100%;
     font-family: "Mont";
     font-weight: 600;
     font-size: 24px;
     line-height: 1em;
     color: #EAF1FF;
     text-decoration: none;
-
+    transform: translate(0,0);
 
     background-image: linear-gradient(#2F5677, #61AFAA);
     background-position: 0% 100%;

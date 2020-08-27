@@ -25,7 +25,6 @@ const imageminPngquant = require('imagemin-pngquant');
 //svg
 const svgSprites = require("gulp-svg-sprites");
 
-
 const paths = {
     root: './dist',
     templates: {
@@ -38,11 +37,11 @@ const paths = {
         src: './src/assets/styles/**/*.scss',
         dest: './dist/wp-content/themes/pokrovsky/assets/styles'
     },
-    // scripts: {
-    //     src: './src/assets/scripts/index-app.js',
-    //     watch: './src/assets/scripts/**/*.js',
-    //     dest: './dist/wp-content/themes/pokrovsky/assets/scripts/'
-    // },
+    scripts: {
+        src: './src/assets/scripts/index-app.js',
+        watch: './src/assets/scripts/*.js',
+        dest: './dist/wp-content/themes/pokrovsky/assets/scripts/libs'
+    },
     fonts: {
         src: './src/assets/fonts/**/*',
         dest: './dist/wp-content/themes/pokrovsky/assets/fonts'
@@ -56,7 +55,7 @@ const paths = {
         dest: './src/assets/svg-sprite/sprite/'
     },
     gulpModules: {
-        src: './src/assets/scripts/modules/**/*.js',
+        src: './src/assets/scripts/modules/*.js',
         dest: './dist/wp-content/themes/pokrovsky/assets/scripts/'
     },
     libs: {
@@ -78,7 +77,7 @@ const paths = {
 function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
-    // gulp.watch(paths.scripts.watch, scripts); //for webpack
+    gulp.watch(paths.scripts.watch, scripts); //for webpack
     // gulp.watch(paths.scripts3d.src, scripts3d); //for webpack
     gulp.watch(paths.gulpModules.src, gulpModules);
     gulp.watch(paths.images.src, images);
@@ -166,19 +165,25 @@ function images() {
     return gulp.src(paths.images.src)
         .pipe(gulp.dest(paths.images.dest));
 }
+
 function clear() {
 	return cache.clearAll();
 };
+
 // gulp.task('clear', function () {
 // 	return cache.clearAll();
 // });
 
 // webpack
-// function scripts() {
-//     return gulp.src(paths.scripts.src)
-//         .pipe(gulpWebpack(webpackConfig, webpack))
-//         .pipe(gulp.dest(paths.scripts.dest));
-// }
+function scripts() {
+    return gulp.src(paths.scripts.src)
+		.pipe(sourcemaps.init({
+			loadMaps: true
+		}))
+        .pipe(gulpWebpack(webpackConfig, webpack))
+		.pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths.scripts.dest));
+}
 
 // function scripts3d() {
 //     return gulp.src(paths.scripts3d.src)
@@ -217,7 +222,7 @@ function libs() {
 
 exports.templates = templates;
 exports.styles = styles;
-// exports.scripts = scripts;
+exports.scripts = scripts;
 // exports.scripts3d = scripts3d;
 exports.gulpModules = gulpModules;
 exports.images = images;
@@ -235,7 +240,7 @@ gulp.task('default', gulp.series(
 		clear,
 		libs,
 		// gulp.parallel(styles, templates, fonts, scripts, images, static),
-		gulp.parallel(styles, templates,video, fonts, gulpModules, images, static),
+		gulp.parallel(styles, templates,video, fonts,scripts, gulpModules, images, static),
 		gulp.parallel(watch, server)
 ));
 

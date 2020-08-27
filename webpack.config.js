@@ -3,8 +3,10 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
     entry: {
-        index: "./src/assets/scripts/index-app.js",
-        // s3d: "./src/assets/scripts/s3d.js",
+        view: "./src/assets/scripts/index-app.js",
+        snake: "./src/assets/scripts/snake.js",
+        sliderThree: "./src/assets/scripts/sliderThree.js",
+        menu: "./src/assets/scripts/menu.js",
     },
     output: {
         filename: "[name].bundle.js"
@@ -19,6 +21,13 @@ const config = {
                     presets: ['@babel/preset-env']
                 }
             }
+        },{
+            test: /\.(png|jpe?g|gif)$/i,
+            loader: 'file-loader',
+            options: {
+                outputPath: '../images',
+                publicPath: 'assets/s3d/images',
+            },
         }
         ]
     },

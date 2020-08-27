@@ -73,7 +73,6 @@ function init() {
         let svg = Snap($(this).find('svg')[0]);
         let figure = svg.select('path');
         figure.animate({'d':pathStart},1400,mina.bounce,function () {});
-
     }
 }
 
@@ -82,6 +81,3 @@ function init() {
 document.addEventListener('DOMContentLoaded',function () {
     init();
 });
-
-
-

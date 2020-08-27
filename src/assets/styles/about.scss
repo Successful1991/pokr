@@ -9,6 +9,9 @@
     grid-template-rows: 200px 570px repeat(3,570px 200px 570px);
     grid-gap: 30px;
     padding: 40px 30px 90px;
+    &-wrap{
+      position: relative;
+    }
   }
   &__el{
     position: relative;
@@ -170,4 +173,19 @@
     height: 175px;
     margin-bottom: 50px;
   }
+}
+
+.snake{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 1px;
+  }
+
 }
