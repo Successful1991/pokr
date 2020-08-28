@@ -26,25 +26,26 @@ function animateMenu() {
             console.log(i);
             console.log(i%2);
             console.log(el);
+            tl.delay(o/10);
             if(i%2 !== 0) {
-              tl.fromTo(el, {yPercent:-2000,},{delay: o*100, duration: 0.9, yPercent:0}, "-=1.4")
+              tl.fromTo(el, {yPercent:-1000,},{duration: 0.9, yPercent:0}, "-=1.4")
                 // .fromTo(el, {yPercent:-500,},{ duration: 0.5, yPercent:0}, "-=1")
-                .fromTo(el, {opacity: 0},{delay: o*100, duration: 0.2, opacity: 1}, "-=1.5")
-                .fromTo(el, {xPercent: 80},{delay: o*100, duration: 0.5, xPercent: 10}, "-=1")
-                .fromTo(el, {rotate: -90},{delay: o*100, duration: 0.4, rotate: 0}, "-=0.8")
-                .fromTo(el, {xPercent: 10},{delay: o*100, duration: 0.3, xPercent: 0}, "-=0.5")
+                .fromTo(el, {opacity: 0},{ duration: 0.2, opacity: 1}, "-=1.5")
+                .fromTo(el, {xPercent: 80},{ duration: 0.5, xPercent: 10}, "-=1")
+                .fromTo(el, {rotate: -90},{ duration: 0.4, rotate: 0}, "-=0.8")
+                .fromTo(el, {xPercent: 10},{ duration: 0.3, xPercent: 0}, "-=0.5")
             } else {
                 // tl.from(el, {
                 //     xPercent:-40,
                 //     yPercent:-1000,
                 //     rotate: 90,
                 // }, "-=0.85")
-                tl.fromTo(el, {yPercent:-2000,},{ delay: o*100, duration: 0.9, yPercent:0}, "-=1.4")
+                tl.fromTo(el, {yPercent:-1000,},{duration: 0.9, yPercent:0}, "-=1.4")
                 // .fromTo(el, {yPercent:-500,},{ duration: 0.5, yPercent:0}, "-=1")
-                    .fromTo(el, {opacity: 0},{ delay: o*100, duration: 0.2, opacity: 1}, "-=1.5")
-                    .fromTo(el, {xPercent: -80},{ delay: o*100, duration: 0.5, xPercent: -10}, "-=1")
-                    .fromTo(el, {rotate: -90},{ delay: o*100, duration: 0.4, rotate: 0}, "-=0.8")
-                    .fromTo(el, {xPercent: -10},{ delay: o*100, duration: 0.3, xPercent: 0}, "-=0.5")
+                    .fromTo(el, {opacity: 0},{ duration: 0.2, opacity: 1}, "-=1.5")
+                    .fromTo(el, {xPercent: -80},{ duration: 0.5, xPercent: -10}, "-=1")
+                    .fromTo(el, {rotate: -90},{ duration: 0.4, rotate: 0}, "-=0.8")
+                    .fromTo(el, {xPercent: -10},{ duration: 0.3, xPercent: 0}, "-=0.5")
             }
 
         })
