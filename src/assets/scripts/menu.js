@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 
 document.addEventListener('DOMContentLoaded',function () {
     animateMenu();
+    newsAnimate();
 });
 
 
@@ -51,5 +52,36 @@ function animateMenu() {
         })
         }
     });
+
+}
+
+function newsAnimate() {
+    console.log(gsap);
+    let tl = gsap.timeline({
+        defaults: { // children inherit these defaults
+            duration: 4,
+            ease: "power0",
+        },
+    });
+    tl.addLabel("news", 0);
+    tl.addLabel("newsel", 2);
+    tl.fromTo('.news__content',{scale: 0.3, opacity: 0},{transformOrigin:"50% 25%", scale: 0.5, opacity: 1, duration: 0.3},"news")
+        .fromTo('.news__content',{scale: 0.3},{scale: 1, delay: 4.5, duration: 0.3}, '>');
+
+let cor =
+    [[100,100],[0, 100],[-100,100],
+    [100,0],[0,0],[-100,0],
+    [100,-100], [0,-100],[-100,-100]];
+// let cor =
+//     [[-100,-100],[0, -100],[100,-100],
+//     [-100,0],[0,0],[100,0],
+//     [-100,100], [0,100],[100,100]];
+
+    $('.js-news__el').each((i,el) => {
+        // fromTo(el,{xPercent: cor[i][0], yPercent: cor[i][1]},{xPercent: cor[i][0], yPercent: cor[i][1], duration: 1})
+        let index = 0.6+((i+1)/10);
+        tl.fromTo(el,{xPercent: cor[i][0], yPercent: cor[i][1]},{xPercent:0, yPercent:0, duration: 0.4} ,"news+="+index)
+    })
+
 
 }
