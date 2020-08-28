@@ -24,19 +24,19 @@ function init() {
     });
 
 
-    $('.js-burger').on('click', e => {
-       if( $('.js-menu').hasClass('menu-active')) {
-           $('.header').removeClass('header-cursor-active');
-           $('.burger__icon').removeClass('burger-close');
-           $('.js-menu').removeClass('menu-active');
-
-        } else {
-           $('.header').addClass('header-cursor-active');
-           $('.burger__icon').addClass('burger-close');
-           $('.js-menu').addClass('menu-active');
-       }
-        // $('.js-menu').addClass('menu-active');
-    });
+    // $('.js-burger').on('click', e => {
+    //    if( $('.js-menu').hasClass('menu-active')) {
+    //        $('.header').removeClass('header-cursor-active');
+    //        $('.burger__icon').removeClass('burger-close');
+    //        $('.js-menu').removeClass('menu-active');
+    //
+    //     } else {
+    //        $('.header').addClass('header-cursor-active');
+    //        $('.burger__icon').addClass('burger-close');
+    //        $('.js-menu').addClass('menu-active');
+    //    }
+    //     // $('.js-menu').addClass('menu-active');
+    // });
 
     $('.js-close').on('click', e => {
         $('.js-menu').removeClass('menu-active');

@@ -1,87 +1,109 @@
 import { gsap } from "gsap";
 
 
+
 document.addEventListener('DOMContentLoaded',function () {
-    animateMenu();
-    newsAnimate();
+    if($(window).width() > 1024){
+        animateMenu();
+        newsAnimate();
+    } else {
+        $('.js-burger').on('click', function () {
+            if( $('.js-menu').hasClass('js-menu-active')) {
+                menuClose();
+            } else {
+                menuOpen();
+            }
+        })
+    }
 });
 
 
 
 function animateMenu() {
-    let list = $('.js-menu .menu__link');
-    let tl = gsap.timeline({
-        // delay: 1.2,
-        defaults: { // children inherit these defaults
-            duration: 1.5,
-            ease: "power0",
-        },
+    let listWrap = $('.js-menu .menu__list');
+    let tl = {
+        1: gsap.timeline(),
+        2: gsap.timeline(),
+        3: gsap.timeline()
+    };
+
+    listWrap.each( (i,elem) => {
+        $(elem).find('.menu__link').each( (iu,el) => {
+            tl[i+1].fromTo(el, {autoAlpha: 0},{ease: "expo.inOut", duration: 1, autoAlpha: 1} , "<0.2")
+                .fromTo(el, {yPercent: 1000},{ease: "expo.out", duration: 1.5, yPercent: 0} , "<");
+           tl[i+1].pause();
+        });
     });
+
+
 
 
     $('.js-burger').on('click', function () {
-        if($('.burger__icon').hasClass('burger-close') ) {
-            let o = 0;
-        list.each( (i,el) => {
-            o++;
-            console.log(i);
-            console.log(i%2);
-            console.log(el);
-            tl.delay(o/10);
-            if(i%2 !== 0) {
-              tl.fromTo(el, {yPercent:-1000,},{duration: 0.9, yPercent:0}, "-=1.4")
-                // .fromTo(el, {yPercent:-500,},{ duration: 0.5, yPercent:0}, "-=1")
-                .fromTo(el, {opacity: 0},{ duration: 0.2, opacity: 1}, "-=1.5")
-                .fromTo(el, {xPercent: 80},{ duration: 0.5, xPercent: 10}, "-=1")
-                .fromTo(el, {rotate: -90},{ duration: 0.4, rotate: 0}, "-=0.8")
-                .fromTo(el, {xPercent: 10},{ duration: 0.3, xPercent: 0}, "-=0.5")
+            if( $('.js-menu').hasClass('js-menu-active')) {
+                gsap.fromTo('.js-menu',{autoAlpha: 1},{autoAlpha: 0, duration: 0.4, ease: "expo.inOut"});
+                $('.header').removeClass('header-cursor-active');
+                $('.burger__icon').removeClass('burger-close');
+                $('.js-menu').removeClass('js-menu-active');
+                setTimeout(function () {
+                    tl[1].pause();
+                    tl[2].pause();
+                    tl[3].pause();
+                    tl[1].progress(0);
+                    tl[2].progress(0);
+                    tl[3].progress(0);
+                },300);
+
             } else {
-                // tl.from(el, {
-                //     xPercent:-40,
-                //     yPercent:-1000,
-                //     rotate: 90,
-                // }, "-=0.85")
-                tl.fromTo(el, {yPercent:-1000,},{duration: 0.9, yPercent:0}, "-=1.4")
-                // .fromTo(el, {yPercent:-500,},{ duration: 0.5, yPercent:0}, "-=1")
-                    .fromTo(el, {opacity: 0},{ duration: 0.2, opacity: 1}, "-=1.5")
-                    .fromTo(el, {xPercent: -80},{ duration: 0.5, xPercent: -10}, "-=1")
-                    .fromTo(el, {rotate: -90},{ duration: 0.4, rotate: 0}, "-=0.8")
-                    .fromTo(el, {xPercent: -10},{ duration: 0.3, xPercent: 0}, "-=0.5")
+                let menu = gsap.timeline();
+                menu.fromTo('.js-menu',{autoAlpha: 0},{autoAlpha: 1, duration: 1.5, ease: "expo.inOut"});
+                menu.add(function () {
+                    tl[1].play();
+                    tl[2].play();
+                    tl[3].play();
+                    gsap.from('.menu__title',{autoAlpha: 0,duration: 1.5, ease: "expo.inOut"})
+                },'<-=0.8');
+                $('.header').addClass('header-cursor-active');
+                $('.burger__icon').addClass('burger-close');
+                $('.js-menu').addClass('js-menu-active');
             }
-
-        })
-        }
     });
+}
 
+function menuOpen() {
+    $('.header').addClass('header-cursor-active');
+    $('.burger__icon').addClass('burger-close');
+    $('.js-menu').addClass(['js-menu-active','menu-active']);
+}
+
+function menuClose() {
+    $('.header').removeClass('header-cursor-active');
+    $('.burger__icon').removeClass('burger-close');
+    $('.js-menu').removeClass(['js-menu-active','menu-active']);
 }
 
 function newsAnimate() {
-    console.log(gsap);
-    let tl = gsap.timeline({
-        defaults: { // children inherit these defaults
-            duration: 4,
-            ease: "power0",
+    gsap.set(".news__content", {scale: 0.3});
+    gsap.set($(".js-news__el")[4], {scale: 1.4, zIndex: 10});
+    gsap.fromTo('.news__content',0.3,{autoAlpha: 0},{ autoAlpha: 1});
+    let tlNews = gsap.timeline({onComplete: args => {
+            gsap.to($(".js-news__el")[4],{scale: 1, duration: 0.4});
+            gsap.to('.news__content',0.4, { delay: 0.45, scale: 1,transformOrigin:"50% top"});
         },
+        delay: 0.4
     });
-    tl.addLabel("news", 0);
-    tl.addLabel("newsel", 2);
-    tl.fromTo('.news__content',{scale: 0.3, opacity: 0},{transformOrigin:"50% 25%", scale: 0.5, opacity: 1, duration: 0.3},"news")
-        .fromTo('.news__content',{scale: 0.3},{scale: 1, delay: 4.5, duration: 0.3}, '>');
 
-let cor =
-    [[100,100],[0, 100],[-100,100],
-    [100,0],[0,0],[-100,0],
-    [100,-100], [0,-100],[-100,-100]];
-// let cor =
-//     [[-100,-100],[0, -100],[100,-100],
-//     [-100,0],[0,0],[100,0],
-//     [-100,100], [0,100],[100,100]];
+    const wrap = $('.news__content')[0];
+    let heightCentr = wrap.offsetHeight /2;
+    let widthCentr = wrap.offsetWidth /2;
 
     $('.js-news__el').each((i,el) => {
-        // fromTo(el,{xPercent: cor[i][0], yPercent: cor[i][1]},{xPercent: cor[i][0], yPercent: cor[i][1], duration: 1})
-        let index = 0.6+((i+1)/10);
-        tl.fromTo(el,{xPercent: cor[i][0], yPercent: cor[i][1]},{xPercent:0, yPercent:0, duration: 0.4} ,"news+="+index)
-    })
+        if(i !== 4) {
+            let x = (((widthCentr - el.offsetWidth / 2 ) - el.offsetLeft ) / el.offsetWidth ) * 100;
+            let y = (((heightCentr - el.offsetHeight / 2 ) - el.offsetTop ) / el.offsetHeight ) * 100;
+            tlNews.fromTo(el,0.4,{xPercent: x, yPercent: y},{xPercent:0, yPercent:0}, "-=0.2");
+        }
+
+    });
 
 
 }

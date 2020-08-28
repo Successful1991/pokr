@@ -16,11 +16,12 @@
   opacity: 0;
   background: url("/wp-content/themes/pokrovsky/assets/images/menu.jpg") no-repeat center /cover;
   pointer-events: none;
-  transition: all 0.4s ease-in;
+  //transition: all 0.4s ease-in;
   &.menu-active{
     visibility: visible;
     pointer-events: auto;
     opacity: 1;
+    transition: all 0.4s ease-in;
   }
   &__close{
     position: relative;

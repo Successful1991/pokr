@@ -15,7 +15,9 @@
     //     $('.js-scroll__toddler').css({'height':heightToddler+'%','top': top+'%'});
     //     console.log(top);
     // })
-
+    $(window).on('beforeunload', function(){
+        $(document).scrollTop(0);
+    });
 
     // initScroll();
 })();
