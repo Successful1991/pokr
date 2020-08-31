@@ -12,11 +12,26 @@ function shake() {
     let historyPoints = [[15,25]];
     const amountEl = $('.about__el').length;
     let wrap = $('.js-snack__wrap');
-    let confSnake = {
-        height: 800,
-        width: wrap.width(),
-        gap : 30
-    };
+    let confSnake = {};
+
+    if(window.innerWidth > 1440){
+        confSnake = {
+            height: 800,
+            minHeight: 200,
+            width: wrap.width(),
+            gap : 30
+        };
+    } else if(window.innerWidth > 768) {
+        confSnake = {
+            height: 495,
+            minHeight: 100,
+            width: wrap.width(),
+            gap : 20
+        };
+    } else {
+        $('#snake').hide();
+        return;
+    }
 
     let svg = Snap($(".snake")[0]);
     let figure = svg.select('path');
@@ -25,10 +40,10 @@ function shake() {
     let curNumPoint = 0;
     let listPoints = [];
     let points = [
-        [[confSnake.gap/2,25],[ confSnake.width/2,255], [confSnake.width-(confSnake.gap/2) ,25]],
-        [[confSnake.gap/2,855],[confSnake.width/2,855],[confSnake.width-(confSnake.gap/2),855]]
+        [[confSnake.gap/2,25],[ confSnake.width/2,confSnake.minHeight + 55], [confSnake.width-(confSnake.gap/2) ,25]],
+        [[confSnake.gap/2,confSnake.height + 55],[confSnake.width/2,confSnake.height + 55],[confSnake.width-(confSnake.gap/2),confSnake.height + 55]]
     ];
-    points = points.concat(createPoints(855, 855, 855 ,570, 800, 30));
+    points = points.concat(createPoints(confSnake.height +55, confSnake.height +55, confSnake.height +55 ,confSnake.height - confSnake.minHeight - confSnake.gap, confSnake.height, confSnake.gap));
     function createPoints(xc1, xc2, xc3 ,min, max, gap) {
         let arr = [];
         let x1 = xc1;
@@ -58,9 +73,6 @@ function shake() {
     animateSnake(listPoints);
     callbackAnimate();
     function addListPoints(amount) {
-        // let curLine = 0;
-        // let curPoint = {x:15,y:25};
-        // let curNumPoint = 0;
         let list = [];
         for (let i = amount; i >= 0; i--){
             let nextPoint = getNextPoint(historyPoints, curLine, curNumPoint,points,amountEl);
@@ -119,32 +131,44 @@ function shake() {
         }
     }
     function ressize() {
-        if(window.innerWidth > 1023){
-        } else if(window.innerWidth > 767){
+        if(window.innerWidth > 1440){
+            confSnake = {
+                height: 800,
+                minHeight: 200,
+                width: $('.js-snack__wrap').width(),
+                gap : 30
+            };
+        } else if(window.innerWidth > 768){
+            confSnake = {
+                height: 495,
+                minHeight: 100,
+                width: wrap.width(),
+                gap : 20
+            };
         } else {
+            anim.pause();
+            anim.progress(0);
+            anim.kill();
+            figure.stop();
+            $('#snake').hide();
+            return
         }
 
         anim.pause();
         anim.progress(0);
         anim.kill();
         historyPoints = [[15,25]];
-        confSnake = {
-            height: 800,
-            width: $('.js-snack__wrap').width(),
-            gap : 30
-        };
-        points = [
-            [[confSnake.gap/2,25],[ confSnake.width/2,255], [confSnake.width-(confSnake.gap/2) ,25]],
-            [[confSnake.gap/2,855],[confSnake.width/2,855],[confSnake.width-(confSnake.gap/2),855]]
-        ];
-        points = points.concat(createPoints(855, 855, 855 ,570, 800, 30));
 
-        console.log(points);
+        points = [
+            [[confSnake.gap/2,25],[ confSnake.width/2,confSnake.minHeight + 55], [confSnake.width-(confSnake.gap/2) ,25]],
+            [[confSnake.gap/2,confSnake.height + 55],[confSnake.width/2,confSnake.height + 55],[confSnake.width-(confSnake.gap/2),confSnake.height + 55]]
+        ];
+        points = points.concat(createPoints(confSnake.height +55, confSnake.height +55, confSnake.height +55 ,confSnake.height - confSnake.minHeight - confSnake.gap, confSnake.height, confSnake.gap));
+
         newAnimate();
     }
 
     window.addEventListener('resize', debounce(ressize, 100));
-
 }
 
 function getNextPoint(historyPoints,curLine, curNumPoint,points,amountEl) {

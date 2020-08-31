@@ -80,23 +80,23 @@
       </div>
     </header>
     <section class="construction">
+      <!-- breadcrumb start-->
+      <ul class="breadcrumb">
+        <li class="breadcrumb__el"><a href="/">Главная</a></li>
+        <!--li.breadcrumb__el-->
+        <!--    a(href='/news.html') Новости-->
+        <!-- repeat-->
+        <li class="breadcrumb__el"><a href="/">Обрати секцію</a></li>
+        <li class="breadcrumb__el"><span>Обрати секцію</span></li>
+      </ul>
+      <!-- breadcrumb end-->
+      <h1 class="title">Хід <br> будівництва</h1>
       <div class="construction__wrap">
         <div class="construction__left">
-          <!-- breadcrumb start-->
-          <ul class="breadcrumb">
-            <li class="breadcrumb__el"><a href="/">Главная</a></li>
-            <!--li.breadcrumb__el-->
-            <!--    a(href='/news.html') Новости-->
-            <!-- repeat-->
-            <li class="breadcrumb__el"><a href="/">Обрати секцію</a></li>
-            <li class="breadcrumb__el"><span>Обрати секцію</span></li>
-          </ul>
-          <!-- breadcrumb end-->
-          <h1 class="title">Хід <br> будівництва</h1>
           <div class="construction__filter-wrap">
             <div class="construction__filter">
               <svg class="construction__filter-bg" width="100%" height="100%" viewBox="0 0 430 194" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M426.5 190.5V71.1202L3.5 4.09822V190.5H426.5Z" stroke="#C58A60" stroke-width="7"></path>
+                <path d="M426.5 190.5V71.1202L3.5 4.09822V190.5H426.5Z" stroke="#C58A60"></path>
               </svg><span class="construction__filter-name">Фільтр:</span>
               <label class="construction__filter-list js-construction__filter-year" for="year">
                 <input type="radio" name="year2" value="not_changed" id="year">
@@ -157,6 +157,7 @@
         </div>
         <div class="construction__content-wrap">
           <div class="construction__content js-construction">
+            <!-- each i in [{month : 5,year: 2016,image: '1.jpg',text: 'Переглянути фотозвіт',id: 1}]-->
             <div class="card js-pagination__card" data-month="5" data-year="2016" data-id="1">
               <div class="card__date">
                 <svg class="icon--date card__date-icon" role="presentation">
@@ -166,7 +167,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/1.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="1">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="1">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -183,7 +184,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/2.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="2">Переглянути  фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="2">Переглянути  фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -200,7 +201,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/3.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="3">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="3">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -217,7 +218,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/4.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="4">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="4">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -234,7 +235,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/6.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="5">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="5">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -251,7 +252,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/5.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="6">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="6">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -268,7 +269,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/1.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="7">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="7">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -285,7 +286,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/4.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="8">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="8">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -302,7 +303,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/6.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="9">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="9">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>
@@ -319,7 +320,7 @@
               <div class="card__img"><img src="/wp-content/themes/pokrovsky/assets/images/construction/3.jpg" alt="foto"/>
               </div>
               <!-- p.card-text Запрошуємо на попередній запис!-->
-              <div class="card__button js-card__button" data-id="10">Переглянути фотозвіт
+              <div class="card__button button-hover js-card__button" data-id="10">Переглянути фотозвіт
                 <div class="bg-small-left"><svg viewBox="0 0 117 91" fill="none" class="svg-bg" xmlns="http://www.w3.org/2000/svg">
     <path d="M3.5,87.5v-66L113.5,3.4V87.5 Z" id="house-path" stroke-linecap="square" />
 </svg>

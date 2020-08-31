@@ -6,13 +6,14 @@
   height: 100vh;
   background: #2F5677;
   .title{
-    height: inherit;
+    height: 90px;
     margin-bottom: 30px;
   }
   &__wrap{
     display: flex;
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
+    height: calc(100vh - (var(--title-offset)) - (var(--breadcrumb-offset)));
     z-index: 1;
   }
   &__left{
@@ -23,34 +24,35 @@
     padding: 0;
   }
   &__title{
-    font-family: "Mont";
+    font-family: $default-font;
     font-weight: 600;
-    font-size: 24px;
+    font-size: min(vw(24), 24px);
     line-height: 1.6em;
     color: #61AFAA;
     margin-bottom: 32px;
   }
   &__text{
-    font-family: "Mont";
+    font-family: $default-font;
     font-weight: 600;
-    font-size: 18px;
+    font-size: min(vw(18), 18px);
     line-height: 1.8em;
     color: #EAF1FF;
   }
   &__content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: auto;
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+    grid-auto-rows: minmax(auto, 480px);
     grid-gap: 20px;
     height: inherit;
     width: 100%;
     padding: 50px 0 0;
+    margin: 0 auto auto 0;
     overflow-y: auto;
     &-wrap{
       position: relative;
       height: 100%;
-      width: 70%;
-      margin: 0 5% 0 0;
+      //width: 70%;
+      margin: -190px 5% 0 0;
       padding: 50px 0 0;
       &:after{
         content: '';
@@ -91,6 +93,7 @@
       left: 0;
       z-index: 0;
       pointer-events: none;
+      stroke-width: 7px;
     }
     &-wrap{
       display: flex;
@@ -100,8 +103,8 @@
     &-name{
       font-family: "Mont";
       font-weight: 600;
-      font-size: 24px;
-      line-height: 38px;
+      font-size: min(vw(24), 24px);
+      line-height: 1.6em;
       display: flex;
       align-items: center;
       color: #EAF1FF;
@@ -132,13 +135,14 @@
         width: 18px;
         height: 12px;
         z-index: 115;
+        cursor: pointer;
         background: url('/wp-content/themes/pokrovsky/assets/images/icon/arrow-small.svg') no-repeat center;
       }
     }
     &-year{
       display: none;
       font-weight: 500;
-      font-size: 1.4em;
+      font-size: min(vw(18), 18px);
       line-height: 1.6em;
       color: #EAF1FF;
       cursor: pointer;
@@ -163,10 +167,10 @@
     border: 7px solid #61AFAA;
     box-sizing: border-box;
     &__date{
-      font-family: "Mont";
+      font-family: $default-font;
       font-weight: 600;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: min(vw(18), 18px);
+      line-height: lh(32,18);
       color: #7B9AB4;
       margin-bottom: 10px;
       &-icon{
@@ -190,19 +194,21 @@
     }
     &__button{
       position: relative;
-      height: 90px;
-      margin: auto auto 0 55px;
-      padding: 20px 0 0;
+      margin: auto auto 0 var(--mrgn-button);
       width: min-content;
 
-      font-family: "Mont";
+      font-family: $default-font;
       font-weight: 600;
-      font-size: 24px;
+      font-size: min(vw(24), 24px);
       line-height: 1em;
       color: #EAF1FF;
+
       cursor: pointer;
       text-decoration: none;
       z-index: 2;
+      .bg-small-left svg{
+        stroke: #61AFAA;
+      }
     }
   }
 
@@ -356,6 +362,7 @@ input {
   width: 100%;
   padding: 0 0 10px;
   background: #2F5677;
+  cursor: pointer;
   z-index: 99;
   & input:checked + label{
     order: -1;
@@ -393,5 +400,162 @@ input {
   & ~ .select__items > label{
     display: inline-block;
     pointer-events: auto;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  .construction{
+    .title{
+      height: var(--title-height);
+      br{
+        display: none;
+      }
+    }
+    &__title{
+      font-size: 14px;
+      margin-bottom: 24px;
+      br{
+        display: none;
+      }
+    }
+    &__text{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__filter{
+      flex-direction: column;
+      &-name{
+        font-size: 18px;
+      }
+      &-year{
+        font-size: 14px;
+      }
+      &-list{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      &-bg{
+        stroke-width: 4px;
+      }
+    }
+    &__left{
+      width: auto;
+      min-width: 270px;
+      flex-shrink: 1.1;
+    }
+    &__content{
+      grid-auto-rows: minmax(auto, 310px);
+      &-wrap{
+        flex-shrink: 1;
+        margin: calc(-1 * (var(--title-height) + 50px)) 5% 0 0;
+      }
+    }
+    .card{
+      padding: 20px 15px 30px;
+      border-width: 4px;
+      &__date{
+        font-size: 14px;
+      }
+      &__button{
+        font-size: 18px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1023px){
+  .construction{
+    &__title{
+      br{
+        display: inline-block;
+      }
+    }
+    &__filter{
+      &-wrap{
+        padding: 0 20px;
+      }
+    }
+    &__content{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: center;
+      grid-gap: 0;
+    }
+    .card{
+      width: calc(50% - 20px);
+      height: 275px;
+      margin: 10px;
+      &__img{
+        margin-bottom: 20px;
+      }
+      &__date{
+        &-icon{
+          width: 12px;
+          height: 14px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .construction{
+    height: initial;
+    &__wrap{
+      flex-direction: column;
+      height: initial;
+    }
+    &__filter{
+      flex-direction: row;
+      padding: 10px 15px;
+      margin: 0 0 10px 0;
+      border: 2px solid #C58A60;
+      &-bg{
+        display: none;
+      }
+      &-list{
+        width: calc(50% - 20px);
+        height: 24px;
+        margin: 0 20px 0 0;
+        padding: 0;
+        &::after{
+          top: 0.5em;
+        }
+      }
+    }
+    &__title{
+      margin-bottom: 10px;
+    }
+    &__content{
+      padding: 0;
+      &-wrap{
+        margin: 0 auto 90px;
+        padding: 0;
+        &:after,&:before{
+          display: none;
+        }
+      }
+    }
+    .title{
+      margin-bottom: 10px;
+    }
+    .card{
+      width: 100%;
+      max-width: 228px;
+      border-width: 2px;
+      &__button{
+        font-size: 16px;
+      }
+    }
+  }
+  .select__items{
+    input:checked{
+      &+label{
+        margin: 0;
+      }
+    }
   }
 }

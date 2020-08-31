@@ -1,7 +1,16 @@
 (function () {
     $('.construction__filter').on('click', '.js-select__items label', function (e) {
         $('.select-bg').click();
+
+        $.ajax({
+            method: 'POST',
+            url: '/wp-admin/admin-ajax.php',
+            data: "action=constructionFilter&month="+ e.currentTarget.control.defaultValue
+        }).done(function (result) {
+            setFilterInfoConstruct(result)
+        })
     });
+
 
     $('.js-construction').on('click', '.js-card__button',function (e) {
         $('.js-popup__date-text').html($(this).closest('.js-pagination__card').find('.js-card__date-text').html());
@@ -50,5 +59,7 @@
         $('.js-popup').addClass('popup__active');
     }
 
-
+    function setFilterInfoConstruct(data) {
+        $('#js__filter__construct').html(data);
+    }
 })();

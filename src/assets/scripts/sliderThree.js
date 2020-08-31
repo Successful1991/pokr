@@ -63,9 +63,9 @@ function slidesInit(slidesData){
     });
 }
 (function () {
-    // getConfigSlider('/wp-admin/admin-ajax.php');
+    getConfigSlider('/wp-admin/admin-ajax.php');
 
 })();
 
-getConf('/wp-content/themes/pokrovsky/static/configSlide.JSON');
+// getConf('/wp-content/themes/pokrovsky/static/configSlide.JSON');
 

@@ -7,6 +7,7 @@ const config = {
         snake: "./src/assets/scripts/snake.js",
         sliderThree: "./src/assets/scripts/sliderThree.js",
         menu: "./src/assets/scripts/menu.js",
+        news: "./src/assets/scripts/news.js",
     },
     output: {
         filename: "[name].bundle.js"

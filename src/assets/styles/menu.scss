@@ -11,11 +11,11 @@
   width: 100%;
   height: 100%;
   //padding: 0 12.75% 0;
-  z-index: -1;
+  z-index: 10;
   visibility: hidden;
   opacity: 0;
   background: url("/wp-content/themes/pokrovsky/assets/images/menu.jpg") no-repeat center /cover;
-  pointer-events: none;
+  pointer-events: painted;
   //transition: all 0.4s ease-in;
   &.menu-active{
     visibility: visible;
@@ -103,7 +103,7 @@
   }
   &__link{
     display: inline-block;
-    width: 100%;
+    //width: 100%;
     font-family: "Mont";
     font-weight: 600;
     font-size: 24px;
