@@ -46,8 +46,8 @@
     padding: 190px 100px 90px;
     font-family: "Mont";
     font-weight: 600;
-    font-size: 56px;
-    line-height: 66px;
+    font-size: min(vw(56), 56px);
+    line-height: lh(66,56);
     letter-spacing: 0.02em;
     color: #EAF1FF;
   }
@@ -60,8 +60,8 @@
   &__title{
     font-family: "Mont";
     font-weight: 600;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: min(vw(36), 36px);
+    line-height: lh(48,36);
     letter-spacing: 0.02em;
     color: #EAF1FF;
     margin-bottom: 30px;
@@ -69,8 +69,8 @@
   &__text{
     font-family: "Mont";
     font-weight: 600;
-    font-size: 24px;
-    line-height: 38px;
+    font-size: min(vw(24), 24px);
+    line-height: lh(38,24);
     color: #EAF1FF;
     margin-bottom: 30px;
   }
@@ -85,8 +85,8 @@
 
     font-family: "Mont";
     font-weight: 600;
-    font-size: 24px;
-    line-height: 38px;
+    font-size: min(vw(24), 24px);
+    line-height: lh(38,24);
     color: #EAF1FF;
   }
   &__icon{
@@ -105,13 +105,125 @@
   }
   &__button{
     position: relative;
-    margin: 0 0 0 55px;
-    padding: 30px 0 15px 0;
+    margin: 0 0 0 var(--mrgn-button);
+    //padding: 30px 0 15px 0;
     font-family: "Mont";
     font-weight: 600;
-    font-size: 24px;
+    font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #FFFFFF;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1440px){
+  .philosophy{
+    &__title{
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    &__text{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__el{
+      font-size: 14px;
+    }
+    &__button{
+      font-size: 18px;
+      padding: 0;
+    }
+    &__left{
+      width: 25%;
+      margin: 0 0 0 5%;
+    }
+    &__right{
+      padding: 105px 40px 45px 75px;
+      font-size: 36px;
+      line-height: 48px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .philosophy{
+    display: flex;
+    flex-direction: column;
+    &__bg{
+      &-place{
+        width: 45%;
+      }
+    }
+    &__title{
+      margin-bottom: 20px;
+    }
+    &__text{
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    &__el{
+      line-height: 24px;
+    }
+    &__left{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      justify-content: center;
+      width: 40%;
+      z-index: 0;
+    }
+    &__right{
+      padding: 70px 40px 30px 40px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .philosophy{
+    display: flex;
+    flex-direction: column;
+    &__bg{
+      &-place{
+        display: none;
+      }
+    }
+    &__title{
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 15px;
+    }
+    &__text{
+      margin-bottom: 15px;
+    }
+    &__el{
+      line-height: 24px;
+    }
+    &__icon{
+      margin-right: 15px;
+    }
+    &__left{
+      position: static;
+      justify-content: center;
+      width: 100%;
+      z-index: 0;
+      margin: 60px 0 0;
+      padding: 20px 15px 90px;
+      background: rgba(47, 86, 119, 0.5);
+    }
+    &__right{
+      position: relative;
+      transform: none;
+      width: calc(100% - 30px);
+      margin: 0 auto;
+      padding: 60px 15px 20px;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }
