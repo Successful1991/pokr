@@ -7,10 +7,18 @@ function init() {
     //     console.log(e);
     //     console.log(this);
     // });
-    // $('.js-floor__filter').on('click', '.floor__list-el',function (e) {
-    //    let section = this.data('section');
-    //    let floor = this.data('floor');
-    // });
+    let section = 1;
+    let floor = 2;
+    getPlane({house:1, sec:section, floor: floor},"POST","/wp-admin/admin-ajax.php");
+    $('.js-floor__filter').on('click', '.floor__list-el',function (e) {
+        if($(this).data('section')){
+            section = $(this).data('section') ;
+        } else if ($(this).data('floor')){
+            floor = $(this).data('floor');
+        }
+        getPlane({house:1, sec:section, floor: floor},"POST","/wp-admin/admin-ajax.php");
+
+    });
 
 
     $('.js-call').on('click touchstart', e => {
@@ -22,6 +30,19 @@ function init() {
         $('.js-form').removeClass('active');
     });
 
+    function getPlane(data,method,url){
+        let r = data;
+        data.action ='choose-floor';
+        $.ajax({
+            method: method,
+            url: url,
+            data: r,
+        })
+            .done(function(datas) {
+                // let data = JSON.parse(datas);
+                $('.floor__render').html(datas);
+            });
+    }
 
     // $('.js-burger').on('click', e => {
     //    if( $('.js-menu').hasClass('menu-active')) {
