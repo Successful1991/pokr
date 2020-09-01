@@ -124,6 +124,7 @@
     elemsWichMakeFilter.rows.forEach(function (row) {
         appartments.push(appartment(row))
     });
+
     // show total quantity
     elemsWichMakeFilter.numberFlats.innerHTML = appartments.length;
 
@@ -217,21 +218,24 @@
         let i = 0;
         // Проход по массиву и сверка ключей и данных
         validDBTable = [];
-
+        console.log(appartments);
         appartments.forEach(function (appartment) {
             appartment.flat.style.display = 'block';
             for (var key in filter) {
-
                 if (Array.isArray(filter[key]) && filter[key].length > 0) {
-                    console.log(filter[key], appartment);
 
                     if (!filter[key].includes(appartment[key])) {
+                        console.log(229);
                         appartment.flat.style.display = 'none';
                         i++;
                         break;
                     }
                 }
+
                 if (filter[key].min > appartment[key] || filter[key].max < appartment[key]) {
+                    console.log(appartment[key]);
+                    console.log(filter[key]);
+                    console.log(237);
                     appartment.flat.style.display = 'none';
                     i++;
                     break;
@@ -241,8 +245,16 @@
                 validDBTable.push(appartment)
             }
         });
-        elemsWichMakeFilter.numberFlats.innerHTML = totalAppartments - i <= 0 ? 0 : totalAppartments - i;
 
+        // elemsWichMakeFilter.numberFlats.innerHTML = totalAppartments - i <= 0 ? 0 : totalAppartments - i;
+
+        if(totalAppartments - i <= 0) {
+            $('.js-chooseFlat__info').css({'visibility':'visible'});
+            elemsWichMakeFilter.numberFlats.innerHTML = 0;
+        } else {
+            $('.js-chooseFlat__info').css({'visibility':'hidden'});
+            elemsWichMakeFilter.numberFlats.innerHTML = totalAppartments - i;
+        }
     });
 
 
@@ -251,7 +263,7 @@
     elemsWichMakeFilter.resetBtn.addEventListener('click', function (e) {
         const ch = $('.js-checkbox-project');
         ch.prop('checked', false);
-
+        $('.js-chooseFlat__info').css({'visibility':'hidden'});
         elemsWichMakeFilter.checkbox.forEach((el)=>{
             el.DOMElem.prop('checked', false);
         });
@@ -310,7 +322,6 @@
 
 
     function setValue(el, val, setVal) {
-        console.log(val);
 
         $('.js_' + el.id + '_min').val(val[setVal[0]]);
         $('.js_' + el.id + '_max').val(val[setVal[1]]);

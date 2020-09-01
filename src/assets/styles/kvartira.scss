@@ -35,7 +35,7 @@
     transform: translate(0, -50%);
 
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #EAF1FF;
@@ -56,7 +56,7 @@
 
 
   font-family: "Mont";
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   line-height: 1em;
   text-align: center;
@@ -83,7 +83,7 @@
     }
     &__link{
       font-family: "Mont";
-      font-weight: 600;
+      font-weight: 500;
       font-size: min(vw(24), 24px);
       line-height: 1em;
       text-align: center;
@@ -96,7 +96,7 @@
   transition: fill 0.4s ease-in ;
   &:hover{
     cursor: pointer;
-    fill: rgba(255,255,255,0.3);
+    fill: rgba(197, 138, 96, 0.75);
   }
 }
 

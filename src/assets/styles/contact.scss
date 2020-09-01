@@ -38,7 +38,7 @@
     }
     &__el{
       font-family: $default-font;
-      font-weight: 600;
+      font-weight: 500;
       color: #EAF1FF;
       margin-bottom: 1em;
     }
@@ -113,7 +113,7 @@
   }
   &__title{
     font-family: $default-font;
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(36), 36px);
     line-height: lh(48,36);
     letter-spacing: 0.02em;
@@ -129,7 +129,7 @@
     height: 45px;
 
     font-family: $default-font;
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #EAF1FF;
@@ -144,7 +144,7 @@
     }
     &::placeholder{
       font-family: $default-font;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1em;
       line-height: 1em;
       color: #EAF1FF;
@@ -163,7 +163,7 @@
   &__submit{
     position: relative;
     font-family: $default-font;
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: 1em;
     text-align: center;

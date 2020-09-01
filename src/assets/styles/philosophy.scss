@@ -45,7 +45,7 @@
     display: inline-block;
     padding: 190px 100px 90px;
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(56), 56px);
     line-height: lh(66,56);
     letter-spacing: 0.02em;
@@ -59,7 +59,7 @@
   }
   &__title{
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(36), 36px);
     line-height: lh(48,36);
     letter-spacing: 0.02em;
@@ -68,7 +68,7 @@
   }
   &__text{
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: lh(38,24);
     color: #EAF1FF;
@@ -84,7 +84,7 @@
     align-items: center;
 
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: lh(38,24);
     color: #EAF1FF;
@@ -108,7 +108,7 @@
     margin: 0 0 0 var(--mrgn-button);
     //padding: 30px 0 15px 0;
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #FFFFFF;

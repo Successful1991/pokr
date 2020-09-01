@@ -1,14 +1,22 @@
 (function () {
-    $('.construction__filter').on('click', '.js-select__items label', function (e) {
+    $('.construction__filter').on('click', '.js-select__items', function (e) {
+        let el = $(this);
         $('.select-bg').click();
+        $('.construction__filter-list').removeClass('select-active');
+        if(!el.parent().hasClass('select-active')){
+            el.parent().addClass('select-active');
+        }
 
-        $.ajax({
-            method: 'POST',
-            url: '/wp-admin/admin-ajax.php',
-            data: "action=constructionFilter&month="+ e.currentTarget.control.defaultValue
-        }).done(function (result) {
-            setFilterInfoConstruct(result)
-        })
+        if(e.target.value) {
+            $.ajax({
+                method: 'POST',
+                url: '/wp-admin/admin-ajax.php',
+                data: "action=constructionFilter&month="+ e.target.value
+            }).done(function (result) {
+                setFilterInfoConstruct(result)
+            })
+        }
+
     });
 
 
@@ -16,11 +24,11 @@
         $('.js-popup__date-text').html($(this).closest('.js-pagination__card').find('.js-card__date-text').html());
         getListImage(this.dataset.id);
 
-
         $('.js-popup__date-text').html($(this).closest('.js-pagination__card').find('.js-card__date-text').html());
         sliderInit();
         $('.js-popup').addClass('popup__active');
     });
+
 
     $('.js-popup__close').on('click', function () {
         $('.js-popup').removeClass('popup__active');

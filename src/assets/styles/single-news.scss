@@ -35,7 +35,7 @@
   }
   &__date{
     font-family: $default-font;
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(18), 18px);
     line-height: 1.6em;
     color: #2F5677;
@@ -48,7 +48,7 @@
   }
   &__title{
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(36), 36px);
     line-height: 1.5em;
     letter-spacing: 0.02em;
@@ -58,7 +58,7 @@
   }
   &__text{
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(18), 18px);
     line-height: lh(32,18);
     color: #FFFFFF;
@@ -77,7 +77,7 @@
   &__button{
     position: relative;
     font-family: $default-font;
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: 1em;
     text-decoration: none;
@@ -136,7 +136,7 @@
     }
     &__title{
       font-family: $default-font;
-      font-weight: 600;
+      font-weight: 500;
       font-size: min(vw(36), 36px);
       line-height: 1.5em;
       text-align: center;
@@ -161,7 +161,7 @@
     }
     &__date{
       font-family: $default-font;
-      font-weight: 600;
+      font-weight: 500;
       font-size: min(vw(14), 14px);
       line-height: 1em;
       text-transform: uppercase;
@@ -172,7 +172,7 @@
     &__link{
       display: inline-block;
       font-family: $default-font;
-      font-weight: 600;
+      font-weight: 500;
       font-size: min(vw(18), 18px);
       line-height: 1.8em;
       color: #7B9AB4;

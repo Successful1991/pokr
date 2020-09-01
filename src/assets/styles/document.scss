@@ -31,7 +31,7 @@
     position: relative;
     margin: auto 0 15px var(--mrgn-button);
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #EAF1FF;
@@ -43,7 +43,7 @@
   }
   &__text{
     font-family: "Mont";
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: lh(38,24);
     color: #EAF1FF;

@@ -41,7 +41,7 @@
   }
   &__title{
     font-family: $default-font;
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(18), 18px);
     line-height: 1.8em;
     color: #EAF1FF;
@@ -76,7 +76,7 @@
   &__button{
     position: relative;
     font-family: $default-font;
-    font-weight: 600;
+    font-weight: 500;
     font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #FFFFFF;

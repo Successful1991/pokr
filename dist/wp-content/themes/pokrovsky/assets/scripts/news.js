@@ -19,7 +19,7 @@
         $(document).scrollTop(0);
     });
 
-    // initScroll();
+    initScroll();
 })();
 
 function initScroll() {
@@ -27,7 +27,6 @@ function initScroll() {
     // let heightContent = $('.others__wrap')[0].scrollHeight;
     // let heightToddler = heightWrap/(heightContent/100);
     let param = updateParamScroll();
-    console.log('init',param);
     // console.log(heightContent);
     $('.js-scroll__toddler').css({'height': param.heightToddler +'%'});
 

@@ -3,24 +3,23 @@
 
 function init() {
     // sliders init start
-    $('.js-floor__filter').on('click','.floor__list',function(e){
-        console.log(e);
-        console.log(this);
-    });
-    $('.js-floor__filter').on('click', '.floor__list-el',function (e) {
-       let section = this.data('section');
-       let floor = this.data('floor');
-    });
+    // $('.js-floor__filter').on('click','.floor__list',function(e){
+    //     console.log(e);
+    //     console.log(this);
+    // });
+    // $('.js-floor__filter').on('click', '.floor__list-el',function (e) {
+    //    let section = this.data('section');
+    //    let floor = this.data('floor');
+    // });
 
 
     $('.js-call').on('click touchstart', e => {
         e.preventDefault();
-        $('.js-popup__forms').addClass('active');
-        $('.js-popup__forms').find('.js-wb').addClass(['wb-show','wb-animate']);
+        $('.js-form').addClass('active');
     });
-    $('.js-popup__forms-close').on('click', e => {
-        $('.js-popup__forms').removeClass('active');
-        $('.js-popup__forms').find('.js-wb').removeClass(['wb-show','wb-animate']);
+
+    $('.js-form-close').on('click touchstart', e => {
+        $('.js-form').removeClass('active');
     });
 
 
@@ -51,11 +50,8 @@ function init() {
             $('.lang').removeClass('active');
             $(document).off('touchstart', remove);
         }
-
     }
 
-
-     $(".js-form-tel").mask("(999)999-9999");
 
     const pathEnd = 'M3.5,87.5V3.5l110,17.37v66 Z';
     const pathStart = 'M3.5,87.5v-66L113.5,3.4V87.5 Z';
@@ -75,8 +71,6 @@ function init() {
         figure.animate({'d':pathStart},1400,mina.bounce,function () {});
     }
 }
-
-
 
 document.addEventListener('DOMContentLoaded',function () {
     init();
