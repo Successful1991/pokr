@@ -397,7 +397,7 @@
     color: #EAF1FF;
     font-family: $default-font;
     font-weight: 500;
-    font-size: 24px;
+    font-size: min(vw(24), 24px);
     line-height: 1em;
     text-align: left;
 

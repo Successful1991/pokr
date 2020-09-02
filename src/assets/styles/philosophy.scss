@@ -126,10 +126,12 @@
     }
     &__text{
       font-size: 14px;
+      line-height: 24px;
       margin-bottom: 10px;
     }
     &__el{
       font-size: 14px;
+      line-height: 24px;
     }
     &__button{
       font-size: 18px;
@@ -137,12 +139,21 @@
     }
     &__left{
       width: 25%;
-      margin: 0 0 0 5%;
+      margin: 0 0 0 7%;
     }
     &__right{
       padding: 105px 40px 45px 75px;
       font-size: 36px;
       line-height: 48px;
+    }
+    &__icon{
+      width: 13px;
+      height: 16px;
+      margin-right: 15px;
+      svg{
+        width: 13px;
+        height: 16px;
+      }
     }
   }
 }

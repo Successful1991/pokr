@@ -16,7 +16,7 @@
     height: 100%;
     max-width: 1235px;
     margin: 0 auto;
-    padding: 65px 0 0;
+    padding: 50px 0 0;
   }
   &__block{
     width: 36.5%;
@@ -50,6 +50,7 @@
   &__house{
     width: 46%;
     padding: 90px 5% 3%;
+    margin-top: -40px;
     background: url("../images/main/house-orange.svg") no-repeat center;
   }
   &__line{
@@ -146,6 +147,7 @@
     }
     &__house{
       padding: 90px 5% 45px;
+      margin-top: -20px;
     }
     &__line{
       border-bottom-width: 4px;
@@ -184,6 +186,7 @@
     &__house{
       padding: 85px 35px 30px;
       margin-bottom: 30px;
+      margin-top: 0;
     }
     &__line{
       margin-bottom: 30px;

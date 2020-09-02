@@ -153,6 +153,7 @@
     padding: 60px 42px 30px;
   }
   &__text{
+    width: 40%;
     font-family: "Mont";
     font-weight: 500;
     font-size: min(vw(24), 24px);
@@ -172,6 +173,9 @@
     width: 200px;
     height: 175px;
     margin-bottom: 50px;
+  }
+  .title{
+    height: min(vw(56), 56px);
   }
 }
 

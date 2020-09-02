@@ -3,8 +3,10 @@
   flex-direction: column;
   align-content: flex-start;
   height: 100%;
+  min-height: 100vh;
   background: #8890A1;
-  padding: 0 0 110px;
+  padding: 0;
+  //padding: 0 0 110px;
   &__param{
     position: relative;
     margin: 0 auto 0 var(--mrgn-button);

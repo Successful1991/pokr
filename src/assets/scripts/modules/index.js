@@ -7,6 +7,17 @@ function init() {
     //     console.log(e);
     //     console.log(this);
     // });
+    if($(document).scrollTop() > 0) {
+        $('.header').removeClass('header__transeperent');
+    }
+    $(document).on('scroll',function (e) {
+        if($(document).scrollTop() < 50) {
+            $('.header').addClass('header__transeperent');
+        } else {
+            $('.header').removeClass('header__transeperent');
+        }
+    });
+
     let section = 1;
     let floor = 2;
     getPlane({house:1, sec:section, floor: floor},"POST","/wp-admin/admin-ajax.php");
@@ -17,9 +28,7 @@ function init() {
             floor = $(this).data('floor');
         }
         getPlane({house:1, sec:section, floor: floor},"POST","/wp-admin/admin-ajax.php");
-
     });
-
 
     $('.js-call').on('click touchstart', e => {
         e.preventDefault();

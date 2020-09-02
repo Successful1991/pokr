@@ -1,16 +1,23 @@
 .single-news{
   display: flex;
   flex-direction: column;
+  z-index: 5;
   height: 100vh;
   background: #2F5677;
   &__wrap{
     display: flex;
     width: 64%;
     max-width: 1235px;
-    height: calc(100vh - (var(--header-height) + var(--breadcrumb-offset)));
-    margin: 0 auto 50px;
+    height: calc(100vh - (var(--breadcrumb-offset)));
+    margin: 0 auto;
     overflow: hidden;
     padding: 20px 0 0;
+    .content__wrap{
+      padding: 0 0 110px;
+      &::-webkit-scrollbar{
+        width: 0;
+      }
+    }
   }
   &__content{
     position: relative;
@@ -39,6 +46,7 @@
     font-size: min(vw(18), 18px);
     line-height: 1.6em;
     color: #2F5677;
+    margin-bottom: 20px;
     &-icon{
       width: 18px;
       height: 16px;

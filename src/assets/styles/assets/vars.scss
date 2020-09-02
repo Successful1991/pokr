@@ -33,7 +33,7 @@ $bc: #000;
 
 
 body{
-  --header-height: 110px;
+  --header-height: 140px;
   --breadcrumb-height: 25px;
   --breadcrumb-marg: 150px;
   --breadcrumb-offset: var(--breadcrumb-height) + var(--breadcrumb-marg);
@@ -44,7 +44,7 @@ body{
 }
   @media screen and (max-width: 1440px){
     body{
-      --header-height: 95px;
+      --header-height: 105px;
       --mrgn-button: 35px;
       --breadcrumb-height: 15px;
       --breadcrumb-marg: 115px;

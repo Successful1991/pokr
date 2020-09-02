@@ -34,6 +34,7 @@ function animateMenu() {
 
     $('.js-burger').on('click', function () {
             if( $('.js-menu').hasClass('js-menu-active')) {
+
                 gsap.fromTo('.js-menu',{autoAlpha: 1},{autoAlpha: 0, duration: 0.4, ease: "expo.inOut"});
                 $('.header').removeClass('header-cursor-active');
                 $('.burger__icon').removeClass('burger-close');
@@ -46,6 +47,7 @@ function animateMenu() {
                     tl[2].progress(0);
                     tl[3].progress(0);
                 },300);
+                animateStop();
 
             } else {
                 let menu = gsap.timeline();
@@ -59,17 +61,22 @@ function animateMenu() {
                 $('.header').addClass('header-cursor-active');
                 $('.burger__icon').addClass('burger-close');
                 $('.js-menu').addClass('js-menu-active');
+                animate();
             }
     });
 }
 
 function menuOpen() {
+    animate();
+    $('.cursor__text').hide();
     $('.header').addClass('header-cursor-active');
     $('.burger__icon').addClass('burger-close');
     $('.js-menu').addClass(['js-menu-active','menu-active']);
 }
 
 function menuClose() {
+    animateStop();
+    $('.cursor__text').show();
     $('.header').removeClass('header-cursor-active');
     $('.burger__icon').removeClass('burger-close');
     $('.js-menu').removeClass(['js-menu-active','menu-active']);
@@ -172,7 +179,7 @@ const fragment = `
 
 const imageUrl = '/wp-content/themes/pokrovsky/assets/images/menu.jpg';
 const parent = document.querySelector('.js-menu');
-let renderer, scene, camera, uniforms, object, a1, a2, mat;
+let renderer, scene, camera, uniforms, object, a1, a2, mat,animateReq;
 const imagesRatio = parent.offsetHeight / parent.offsetWidth;
 let mouse = {
     x: 0,
@@ -307,13 +314,18 @@ var render = function () {
 /*  */
 var MyTexture = new THREE.TextureLoader().load(imageUrl, function () {
     initWebGL();
-    animate();
+    // animate();
 });
+
 /*  */
 /*  */
 function animate() {
-    requestAnimationFrame(animate);
+    animateReq = requestAnimationFrame(animate);
     render();
+}
+
+function animateStop() {
+    cancelAnimationFrame(animateReq);
 }
 /*  */
 /*  */

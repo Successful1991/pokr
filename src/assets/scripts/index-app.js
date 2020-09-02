@@ -198,9 +198,9 @@ function getConfig(url) {
 }
 
 document.addEventListener('DOMContentLoaded',function () {
-    getConfig('/wp-content/themes/pokrovsky/static/viewSlider.JSON');
+    // getConfig('/wp-content/themes/pokrovsky/static/viewSlider.JSON');
 });
 
 // (function () {
-//     getConf('/wp-admin/admin-ajax.php');
+    getConf('/wp-admin/admin-ajax.php');
 // })();

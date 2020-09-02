@@ -3,6 +3,7 @@
   flex-direction: column;
   align-content: flex-start;
   height: 100%;
+  z-index: 5;
   //max-height: 100vh;
   //padding: 30px 0 50px;
   //overflow: hidden;
@@ -25,7 +26,8 @@
   }
   &__el{
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     //height: 100%;
     width: calc(33.3% - 90px);
     margin: 45px;
@@ -91,7 +93,7 @@
     font-size: min(vw(24), 24px);
     line-height: 1em;
     color: #EAF1FF;
-    margin-left: var(--mrgn-button);
+    margin: auto 0 0 var(--mrgn-button);
     z-index: 1;
     svg{
       stroke: #61AFAA;

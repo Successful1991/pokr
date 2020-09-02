@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 
 document.addEventListener('DOMContentLoaded',function () {
+
     if($(window).width() > 1024){
         newsAnimate();
     }
